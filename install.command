@@ -46,7 +46,10 @@ ALGORITHMS="adler32 cksum crc8 crc16 crc24 crc32 crc32_bzip2 crc32_mpeg2 crc64 e
 for ALGO in $ALGORITHMS
 do
   # Creating /tmp/$ALGO.applescript
-  head -n19 "$0" | tail -n18 > "/tmp/$ALGO.applescript"
+  # Make copyright header compatible with old AppleScript versions 1.x
+  echo '(*' > "/tmp/$ALGO.applescript"
+  head -n19 "$0" | tail -n18 | tr '#' ' ' >> "/tmp/$ALGO.applescript"
+  echo '*)' >> "/tmp/$ALGO.applescript"
   echo -n 'tell application "Finder"
   set theseItems to the selection
 end tell
@@ -78,8 +81,9 @@ done
 echo "
 Jacksum has been integrated into the Finder's script menu.
 
-Make sure that you have activated the Apple Script Menu. The Script Menu 
-preferences are at the Apple Script-Editor's preferences, in the General tab.
+Make sure that you have activated the Apple Script Menu. Starting with
+Mac OS X 10.6 (Snow Leopard), the Script Menu preferences are at the Apple 
+Script-Editor's preferences, in the General tab.
 
 Go to Finder, select a folder or one or more files and choose an algorithm from
 the script folder called Jacksum in order to calculate checksums for the files.

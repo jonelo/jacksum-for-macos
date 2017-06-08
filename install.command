@@ -66,8 +66,7 @@ echo -n ' " & allFiles & " > /tmp/jacksum.txt; echo --- >> /tmp/jacksum.txt; ech
 echo -n "$ALGO" >> "/tmp/$ALGO.applescript"
 echo ' >> /tmp/jacksum.txt"
 do shell script theCommand
-property targetURL : "file:///tmp/jacksum.txt"
-open location targetURL' >> "/tmp/$ALGO.applescript"
+do shell script "open -e /tmp/jacksum.txt"' >> "/tmp/$ALGO.applescript"
 
 # Compiling to $SCRIPTS/$ALGO.scpt
 echo "Installing $ALGO ..."

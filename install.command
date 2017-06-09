@@ -30,10 +30,37 @@ cp "$CURRDIR/jacksum.jar" "$PROGDIR"
 echo "Copying license.txt ..."
 cp "$CURRDIR/license.txt" "$PROGDIR"
 
+JAVALAUNCHER="$PROGDIR/javalauncher"
+echo "Creating $JAVALAUNCHER ..."
+cat << "EOL" > "$JAVALAUNCHER"
+#!/bin/bash
+if [[ ! -z $JAVA_HOME ]]; then
+    JEXEC=$JAVA_HOME/bin/java
+else
+    LIBEXEC=$(/usr/libexec/java_home 2> /dev/null | head -1)
+    # is there a JDK?
+    if [[ ! -z $LIBEXEC ]]; then
+        JEXEC="$LIBEXEC/bin/java"
+    else
+       # is there a JRE?
+       JRE=/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java
+       if [[ -f "$JRE" ]]; then
+           JEXEC="$JRE"
+       else
+           JEXEC=java
+       fi
+    fi
+fi
+"$JEXEC" "$@"
+EOL
+chmod +x "$JAVALAUNCHER"
+
 LAUNCHER="$PROGDIR/jacksum"
 echo "Creating $LAUNCHER ..."
-echo '#!/bin/bash
-java -jar "/Applications/Jacksum/jacksum.jar" "$@"' > "$LAUNCHER"
+cat << "EOL" > "$LAUNCHER"
+#!/bin/bash
+/Applications/Jacksum/javalauncher -jar "/Applications/Jacksum/jacksum.jar" "$@"
+EOL
 chmod +x "$LAUNCHER"
 
 if [ $(id | cut -c5) -ne 0 ]; then
@@ -77,7 +104,8 @@ rm "/tmp/$ALGO.applescript"
 
 done
 
-echo "
+cat << EOL
+
 Jacksum has been integrated into the Finder's script menu.
 
 Make sure that you have activated the Apple Script Menu. Starting with
@@ -87,5 +115,5 @@ Script-Editor's preferences, in the General tab.
 Go to Finder, select a folder or one or more files and choose an algorithm from
 the script folder called Jacksum in order to calculate checksums for the files.
 
-Done."
-
+Done.
+EOL

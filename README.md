@@ -53,6 +53,19 @@ $ /Applications/Jacksum/jacksum
 Open Finder, hit ⇧⌘G, enter the path to the Finder scripts folder `~/Library/Scripts/Applications/Finder`, and click on the Go button.
 Click on `Jacksum 3.0.0`, and remove any .scpt file that you don't wanna see.
 
+#### Recreate all algorithms
+
+Just run the .app again.
+
+### How to uninstall it
+
+Open a terminal and type
+```
+cd
+rm -Rf ~/Library/Scripts/Applications/Finder/Jacksum*
+rm -Rf /Applications/Jacksum
+```
+
 
 ## Tech details
 

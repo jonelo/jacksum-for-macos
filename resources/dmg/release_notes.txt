@@ -1,0 +1,35 @@
+Release Notes
+-------------
+1.2.0, Sep 18, 2021
+- bundled Jacksum 3.0.0 which comes with 470 algorithms
+
+1.1.3, Jun 9, 2017
+- fixed: Jacksum doesn't launch if only a JRE is installed
+
+1.1.2, Jun 7, 2017
+- fixed: Applescript on Sierra didn't open the file in the editor anymore
+
+1.1.1, Feb 28, 2016
+- fixed regression that breaks osacompile on AppleScript 1.x
+- script now works with all Mac OS X releases starting with 10.2 until 10.11
+- installer app requires Mac OS X 10.7 or later
+
+1.1.0, Feb 13, 2016
+- by default the script folder of the user will be used and if the installer 
+  has been started using root permissions, the system script folder will be 
+  used
+- script wrapped into an .app using Platypus 5.0; the .app requires 
+  Mac OS X 10.7 or later, the script itself requires Mac OS X 10.4 or later
+- improved message/instructions after the installation
+- a nice icon for the installer .app
+
+1.0.2, Nov 14, 2010
+- blanks in filenames can cause the output to be empty
+
+1.0.1, Nov 10, 2010
+- replaced sh by bash in order to keep compatibility
+  from Mac OS X 10.4 to Mac OS 10.6
+
+1.0.0, Aug 15, 2010
+- first public release (tested on Mac OS 10.4 only)
+

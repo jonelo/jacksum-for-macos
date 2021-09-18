@@ -1,8 +1,8 @@
 # Jacksum File Browser Integration on macOS
 
-The installer script can install Jacksum's primary features to macOS Finder's Script Menu.
+The scripts in ./bin can create an .app and wraps it in a .dmg for macOS.
+The core of the .app is bash script that installs Jacksum's primary features to macOS Finder's Script Menu.
 
-The script requires Mac OS X 10.4 or later in order to run properly.
-It expects both jacksum.jar and license.txt in the same directory where the script is stored.
+The .app requires Mac OS X 10.8 or later.
 
 For more information about Jacksum see also http://jacksum.net

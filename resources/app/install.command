@@ -1,7 +1,7 @@
 #!/bin/bash
 # 
-#  Jacksum File Browser Integration for Mac OS X
-#  Copyright (C) 2010-2016 Dipl.-Inf. (FH) Johann N. Loefflmann
+#  Jacksum File Browser Integration for macOS
+#  Copyright (c) 2010-2021 Dipl.-Inf. (FH) Johann N. Loefflmann
 #
 #  This program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -20,13 +20,14 @@
 # Explicitly set the PATH
 PATH="/sbin:/usr/sbin:/bin:/usr/bin"
 
+JACKSUM_VERSION=3.0.0
 PROGDIR=/Applications/Jacksum
 mkdir -p "$PROGDIR"
 
 CURRDIR="$(cd "$(dirname "$0")" && pwd)"
 
-echo "Copying jacksum.jar ..."
-cp "$CURRDIR/jacksum.jar" "$PROGDIR"
+echo "Copying jacksum-${JACKSUM_VERSION}.jar ..."
+cp "$CURRDIR/jacksum-${JACKSUM_VERSION}.jar" "${PROGDIR}/jacksum.jar"
 echo "Copying license.txt ..."
 cp "$CURRDIR/license.txt" "$PROGDIR"
 
@@ -64,19 +65,23 @@ EOL
 chmod +x "$LAUNCHER"
 
 if [ $(id | cut -c5) -ne 0 ]; then
-    SCRIPTS="$HOME/Library/Scripts/Applications/Finder/Jacksum"
+    SCRIPTS="${HOME}/Library/Scripts/Applications/Finder/Jacksum ${JACKSUM_VERSION}"
 else
-    SCRIPTS="/Library/Scripts/Finder Scripts/Jacksum"
+    SCRIPTS="/Library/Scripts/Finder Scripts/Jacksum ${JACKSUM_VERSION}"
 fi
 mkdir -p "$SCRIPTS"
-ALGORITHMS="adler32 cksum crc8 crc16 crc24 crc32 crc32_bzip2 crc32_mpeg2 crc64 ed2k elf fcs16 gost has160 haval_128_3 haval_128_4 haval_128_5 haval_160_3 haval_160_4 haval_160_5 haval_192_3 haval_192_4 haval_192_5 haval_224_3 haval_224_4 haval_224_5 haval_256_3 haval_256_4 haval_256_5 md2 md4 md5 ripemd128 ripemd160 ripemd256 ripemd320 sha0 sha1 sha224 sha256 sha384 sha512 sum8 sum16 sum24 sum32 sumbsd sumsysv tiger tiger128 tiger160 tiger2 tree:tiger tree:tiger2 whirlpool0 whirlpool1 whirlpool2 xor8"
+ALGORITHMS="$(/Applications/Jacksum/jacksum -a all --list)"
 for ALGO in $ALGORITHMS
 do
-  # Creating /tmp/$ALGO.applescript
+  # the / is for folders, so we have to adjust the filename for e.g. SHA512/224
+  SCRIPT_NAME="${ALGO//\//-}"
+  APPLE_SCRIPT="/tmp/${SCRIPT_NAME}.applescript"
+  COMPILED_SCRIPT="${SCRIPTS}/${SCRIPT_NAME}.scpt"
+  # Creating ${APPLE_SCRIPT}
   # Make copyright header compatible with old AppleScript versions 1.x
-  echo '(*' > "/tmp/$ALGO.applescript"
-  head -n19 "$0" | tail -n18 | tr '#' ' ' >> "/tmp/$ALGO.applescript"
-  echo '*)' >> "/tmp/$ALGO.applescript"
+  echo '(*' > "${APPLE_SCRIPT}"
+  head -n19 "$0" | tail -n18 | tr '#' ' ' >> "${APPLE_SCRIPT}"
+  echo '*)' >> "${APPLE_SCRIPT}"
   echo -n 'tell application "Finder"
   set theseItems to the selection
 end tell
@@ -87,20 +92,20 @@ repeat with i from 1 to the count of theseItems
   set thisFileQuoted to quoted form of thisFile
   set allFiles to allFiles & " " & thisFileQuoted
 end repeat
-set theCommand to "/Applications/Jacksum/jacksum -a ' >> "/tmp/$ALGO.applescript"
-echo -n "$ALGO" >> "/tmp/$ALGO.applescript"
-echo -n ' " & allFiles & " > /tmp/jacksum.txt; echo --- >> /tmp/jacksum.txt; echo Created with Jacksum 1.7.0, algorithm=' >> "/tmp/$ALGO.applescript"
-echo -n "$ALGO" >> "/tmp/$ALGO.applescript"
+set theCommand to "/Applications/Jacksum/jacksum -a ' >> "${APPLE_SCRIPT}"
+echo -n "$ALGO" >> "${APPLE_SCRIPT}"
+echo -n ' " & allFiles & " > /tmp/jacksum.txt; echo --- >> /tmp/jacksum.txt; echo Created with Jacksum '"${JACKSUM_VERSION}"', algorithm='"${ALGO}" >> "${APPLE_SCRIPT}"
+#echo -n "$ALGO" >> "${APPLE_SCRIPT}"
 echo ' >> /tmp/jacksum.txt"
 do shell script theCommand
-do shell script "open -e /tmp/jacksum.txt"' >> "/tmp/$ALGO.applescript"
+do shell script "open -e /tmp/jacksum.txt"' >> "${APPLE_SCRIPT}"
 
-# Compiling to $SCRIPTS/$ALGO.scpt
+# Compiling to .applescript to .scpt
 echo "Installing $ALGO ..."
-osacompile -d -o "/$SCRIPTS/$ALGO.scpt" "/tmp/$ALGO.applescript"
+osacompile -d -o "${COMPILED_SCRIPT}" "${APPLE_SCRIPT}"
 
-# Removing /tmp/$ALGO.applescript
-rm "/tmp/$ALGO.applescript"
+# Clean up
+rm "${APPLE_SCRIPT}"
 
 done
 

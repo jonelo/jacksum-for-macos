@@ -9,7 +9,7 @@ See also [https://jacksum.net](https://jacksum.net) and [https://github.com/jone
 
 ## System Requirements
 
-- Mac OS X 10.8 (Mountain Lion) or later, tested up to macOS 11.1 (Big Sur)
+- OS X 10.8 (Mountain Lion) or later, tested up to macOS 11.1 (Big Sur)
 - Finder
 - JDK 11 or later, see also [https://adoptium.net](https://adoptium.net)
 - 2 MiB disk space for Jacksum

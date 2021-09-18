@@ -15,7 +15,7 @@ See also [https://jacksum.net](https://jacksum.net) and [https://github.com/jone
 
 ## Quick Start
 
-### How to install and configure it
+### How to install it
 
 - Download and install a Java Development Kit (JDK), go to [https://adoptium.net](https://adoptium.net)
 - Activate the Apple Script Menu, see also [https://support.apple.com/en-tm/guide/script-editor/scpedt27975/mac](https://support.apple.com/en-tm/guide/script-editor/scpedt27975/mac)
@@ -25,11 +25,12 @@ See also [https://jacksum.net](https://jacksum.net) and [https://github.com/jone
   <img src="docs/images/Jacksum 3.0.0 FBI on macOS during installation.png" width="629" alt="Jacksum 3.0.0 FBI on macOS during installation">
 </p>
 
+
 ### How to use it
 
 #### Using Finder and the script menu
 
-Go to Finder, select files and folders and choose an algorithm from the script folder called Jacksum in order to calculate checksums, CRCs or hash values of the files.
+Go to Finder, select files and folders and choose an algorithm from the script folder called "Jacksum 3.0.0" in order to calculate checksums, CRCs and hash values of the selected files.
 
 <p align="center">
   <img src="docs/images/Jacksum 3.0.0 at the script menu.png" width="413" alt="Jacksum 3.0.0 at the script menu">
@@ -42,6 +43,14 @@ Open a Terminal, and use all features that Jacksum provides.
 ```
 $ /Applications/Jacksum/jacksum
 ```
+
+### How to configure it
+
+#### Limit the number of algorithms
+
+Open Finder, hit ⇧⌘G, enter the path to the Finder scripts folder `~/Library/Scripts/Applications/Finder`, and click on the Go button.
+Click on `Jacksum 3.0.0`, and remove any .scpt file that you don't wanna see.
+
 
 ## Tech details
 

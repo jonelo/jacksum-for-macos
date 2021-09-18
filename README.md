@@ -4,7 +4,7 @@
 
 Allows macOS users to calculate hash values from their files and folders in Finder, just by selecting the algorithm of choice from the script menu. The Finder integration is **powered by Jacksum** which provides **470 algorithms**.
 
-See also https://jacksum.net and https://github.com/jonelo/jacksum
+See also [https://jacksum.net](https://jacksum.net) and [https://github.com/jonelo/jacksum](https://github.com/jonelo/jacksum)
 
 
 ## System Requirements

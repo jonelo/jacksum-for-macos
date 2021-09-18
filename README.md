@@ -5,4 +5,4 @@ The core of the .app is bash script that installs Jacksum's primary features to 
 
 The .app requires Mac OS X 10.8 or later.
 
-For more information about Jacksum see also http://jacksum.net
+For more information about Jacksum see also https://jacksum.net and https://github.com/jonelo/jacksum

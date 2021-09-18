@@ -8,6 +8,7 @@ Allows macOS users to calculate hash values from their files and folders in Find
 ## System Requirements
 
 - Mac OS X 10.8 (Mountain Lion) or later, tested up to macOS 11.1 (Big Sur)
+- Finder
 - JDK 11 or later, see also https://adoptium.net
 
 ## Quick Start

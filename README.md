@@ -11,14 +11,14 @@ See also [https://jacksum.net](https://jacksum.net) and [https://github.com/jone
 
 - Mac OS X 10.8 (Mountain Lion) or later, tested up to macOS 11.1 (Big Sur)
 - Finder
-- JDK 11 or later, see also https://adoptium.net
+- JDK 11 or later, see also [https://adoptium.net](https://adoptium.net)
 
 ## Quick Start
 
 ### How to install and configure it
 
-- Download and install a Java Development Kit (JDK), go to https://adoptium.net
-- Activate the Apple Script Menu, see also https://support.apple.com/en-tm/guide/script-editor/scpedt27975/mac
+- Download and install a Java Development Kit (JDK), go to [https://adoptium.net](https://adoptium.net)
+- Activate the Apple Script Menu, see also [https://support.apple.com/en-tm/guide/script-editor/scpedt27975/mac](https://support.apple.com/en-tm/guide/script-editor/scpedt27975/mac)
 - Download and open the [.dmg](https://github.com/jonelo/jacksum-fbi-macos/releases/latest), and double click on the .app
 
 <p align="center">

@@ -1,5 +1,8 @@
 Release Notes
 -------------
+1.2.1, Sep 20, 2021
+- added progress information for the progress bar
+
 1.2.0, Sep 18, 2021
 - bundled Jacksum 3.0.0 which comes with 470 algorithms
 

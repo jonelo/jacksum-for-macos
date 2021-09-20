@@ -71,6 +71,9 @@ else
 fi
 mkdir -p "$SCRIPTS"
 ALGORITHMS="$(/Applications/Jacksum/jacksum -a all --list)"
+ALGOCOUNT=$(echo "$ALGORITHMS" | wc -l)
+
+FINISHED=0
 for ALGO in $ALGORITHMS
 do
   # the / is for folders, so we have to adjust the filename for e.g. SHA512/224
@@ -100,12 +103,16 @@ echo ' >> /tmp/jacksum.txt"
 do shell script theCommand
 do shell script "open -e /tmp/jacksum.txt"' >> "${APPLE_SCRIPT}"
 
-# Compiling to .applescript to .scpt
-echo "Installing $ALGO ..."
-osacompile -d -o "${COMPILED_SCRIPT}" "${APPLE_SCRIPT}"
+  # Compiling to .applescript to .scpt
+  printf "Installing %s ...\n" "$ALGO"
+  osacompile -d -o "${COMPILED_SCRIPT}" "${APPLE_SCRIPT}"
 
-# Clean up
-rm "${APPLE_SCRIPT}"
+  # Clean up
+  rm "${APPLE_SCRIPT}"
+
+  FINISHED=$((FINISHED+1))
+  PERCENT=$((FINISHED*100/$ALGOCOUNT))
+  printf "PROGRESS:%i\n" $PERCENT
 
 done
 

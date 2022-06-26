@@ -1,3 +1,5 @@
+![GitHub downloads](https://img.shields.io/github/downloads/jonelo/jacksum-fbi-macos/total?color=green)
+
 # Jacksum File Browser Integration on macOS
 
 ## Abstract

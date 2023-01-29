@@ -1,6 +1,6 @@
 #!/bin/bash
 # creates an .app by using the props from cfg/make_app.cfg
-# (c) 2021 Johann N. Löfflmann, <https://johann.loefflmann.net>
+# Copyright (c) 2021-2023 Johann N. Löfflmann, <https://johann.loefflmann.net>
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 CFG_DIR="${SCRIPT_DIR}/../resources"

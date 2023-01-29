@@ -1,7 +1,7 @@
 #!/bin/bash
 # 
 #  Jacksum File Browser Integration for macOS
-#  Copyright (c) 2010-2021 Dipl.-Inf. (FH) Johann N. Loefflmann
+#  Copyright (c) 2010-2023 Dipl.-Inf. (FH) Johann N. Loefflmann
 #
 #  This program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -20,7 +20,7 @@
 # Explicitly set the PATH
 PATH="/sbin:/usr/sbin:/bin:/usr/bin"
 
-JACKSUM_VERSION=3.0.0
+JACKSUM_VERSION=3.5.0
 PROGDIR=/Applications/Jacksum
 mkdir -p "$PROGDIR"
 

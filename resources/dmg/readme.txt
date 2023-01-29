@@ -9,10 +9,10 @@ For more information about Jacksum please go to https://jacksum.net
 How do I install the "Jacksum Finder Integration"?
 --------------------------------------------------
 In order to install Jacksum's primary features to Finder,
-just double click on the icon to run the installer.
+just double-click on the icon to run the installer.
 
-The installer requires Mac OS X 10.8 (Mountain Lion) or later.
-It has been tested up to macOS 11.1 (Big Sur).
+The installer requires Mac OS X 10.11 (El Capitan) or later.
+It has been tested up to macOS 13.2 (Ventura).
 
 The first time you do run the installer you may need to override
 your GateKeeper settings. See also https://support.apple.com/en-us/HT202491
@@ -28,8 +28,8 @@ $ cd /Volumes/Jacksum\ Finder\ Integration
 $ ./Jacksum\ Finder\ Integration.app/Contents/Resources/script
 
 The script itself requires Mac OS X 10.4 (Tiger) or later.
-It has been tested up to macOS 11.1 (Big Sur).
-The script does not require admin priviledges.
+It has been tested up to macOS 13.2 (Ventura).
+The script does not require admin privileges.
 
 Credits: the installer app has been created by Platypus,
 a great app to wrap scripts into an app, see also https://sveinbjorn.org/platypus

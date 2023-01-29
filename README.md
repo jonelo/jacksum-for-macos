@@ -26,7 +26,7 @@ See also [https://jacksum.net](https://jacksum.net) and [https://github.com/jone
 - Download and open the [.dmg](https://github.com/jonelo/jacksum-fbi-macos/releases/latest), and double click on the .app
 
 <p align="center">
-  <img src="docs/images/Jacksum 3.0.0 FBI on macOS during installation.png" width="629" alt="Jacksum 3.0.0 FBI on macOS during installation">
+  <img src="docs/images/Jacksum 3.5.0 FBI on macOS during installation.png" width="629" alt="Jacksum 3.5.0 FBI on macOS during installation">
 </p>
 
 
@@ -34,10 +34,10 @@ See also [https://jacksum.net](https://jacksum.net) and [https://github.com/jone
 
 #### Using Finder and the script menu
 
-Go to Finder, select files and folders and choose an algorithm from the script folder called "Jacksum 3.0.0" in order to calculate checksums, CRCs and hash values of the selected files.
+Go to Finder, select files and folders and choose an algorithm from the script folder called "Jacksum 3.5.0" in order to calculate checksums, CRCs and hash values of the selected files.
 
 <p align="center">
-  <img src="docs/images/Jacksum 3.0.0 at the script menu.png" width="413" alt="Jacksum 3.0.0 at the script menu">
+  <img src="docs/images/Jacksum 3.5.0 at the script menu.png" width="413" alt="Jacksum 3.5.0 at the script menu">
 </p>
 
 #### Using the command line interface
@@ -53,7 +53,7 @@ $ /Applications/Jacksum/jacksum
 #### Limit the number of algorithms
 
 Open Finder, hit ⇧⌘G, enter the path to the Finder scripts folder `~/Library/Scripts/Applications/Finder`, and click on the Go button.
-Click on `Jacksum 3.0.0`, and remove any .scpt file that you don't wanna see.
+Click on `Jacksum 3.5.0`, and remove any .scpt file that you don't wanna see.
 
 #### Recreate all algorithms
 
@@ -76,11 +76,21 @@ rm -Rf /Applications/Jacksum
 #### Download and install the Platypus command line tool
 
 The .app will be created by the Platypus command line tool. Platypus is a great tool create Mac apps from command line scripts.
-Go to https://sveinbjorn.org/platypus, download and open Platypus, select Preferences and install the command line tool.
+Go to https://sveinbjorn.org/platypus, download and open Platypus, select "Settings..." from the Platypus menu and install the command line tool.
+
+#### Clone the sources
+
+Clone or download the sources from the GitHub project:
+```
+git clone https://github.com/jonelo/jacksum-fbi-macos.git
+cd jacksum-fbi-macos/
+```
+
+Note: if you haven't installed git yet, Apple's Install Command Line Developer Tools will install it for you.
 
 #### Run the make_all.sh
 
-Clone or download the sources from the GitHub project, open a terminal and run
+Open a terminal and run
 ```
 ./bin/make_all.sh
 ```

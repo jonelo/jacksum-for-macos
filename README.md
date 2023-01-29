@@ -11,7 +11,7 @@ See also [https://jacksum.net](https://jacksum.net) and [https://github.com/jone
 
 ## System Requirements
 
-- OS X 10.8 (Mountain Lion) or later, tested up to macOS 11.1 (Big Sur)
+- OS X 10.8 (Mountain Lion) or later, tested up to macOS 12.2 (Ventura)
 - Finder
 - JDK 11 or later, see also [https://adoptium.net](https://adoptium.net)
 - 2 MiB disk space for Jacksum
@@ -26,7 +26,7 @@ See also [https://jacksum.net](https://jacksum.net) and [https://github.com/jone
 - Download and open the [.dmg](https://github.com/jonelo/jacksum-fbi-macos/releases/latest), and double click on the .app
 
 <p align="center">
-  <img src="docs/images/Jacksum 3.5.0 FBI on macOS during installation.png" width="629" alt="Jacksum 3.5.0 FBI on macOS during installation">
+  <img src="docs/images/Jacksum 3.0.0 FBI on macOS during installation.png" width="629" alt="Jacksum 3.0.0 FBI on macOS during installation">
 </p>
 
 
@@ -37,7 +37,7 @@ See also [https://jacksum.net](https://jacksum.net) and [https://github.com/jone
 Go to Finder, select files and folders and choose an algorithm from the script folder called "Jacksum 3.5.0" in order to calculate checksums, CRCs and hash values of the selected files.
 
 <p align="center">
-  <img src="docs/images/Jacksum 3.5.0 at the script menu.png" width="413" alt="Jacksum 3.5.0 at the script menu">
+  <img src="docs/images/Jacksum 3.0.0 at the script menu.png" width="413" alt="Jacksum 3.0.0 at the script menu">
 </p>
 
 #### Using the command line interface

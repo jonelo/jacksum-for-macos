@@ -51,8 +51,9 @@ $ /Applications/Jacksum/jacksum
 
 What else do I need to know?
 ----------------------------
-Jacksum requires Java to run, so you have to install a JDK. You can get it
-for free for example at https://adoptium.net (recommended) or http://jdk.java.net/
+Jacksum and HashGarten require Java to run, so you have to install a JDK.
+You can get it for free for example at https://adoptium.net (recommended)
+or http://jdk.java.net/
 
 Also please make sure that you have activated the Apple Script Menu.
 The Script Menu preferences are at the Apple Script-Editor's preferences,
@@ -68,7 +69,7 @@ $HOME/Library/Scripts/Applications/Finder/Jacksum
 or /Library/Scripts/Finder Scripts/Jacksum
 it depends on the priviledge that you used to launch the installer.
 
-Also remove the folder called /Applications/Jacksum
+Also remove the directory called /Applications/Jacksum
 
 
 Where is the sourcecode of the installer script?

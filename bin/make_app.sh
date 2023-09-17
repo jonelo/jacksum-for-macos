@@ -23,6 +23,9 @@ checkPrerequisites /usr/local/bin/platypus
 --author "${APP_AUTHOR}"  \
 --bundle-identifier "${APP_BUNDLE_ID}" \
 --bundled-file "${RES_DIR}/${APP_JAR_FILE}" \
+--bundled-file "${RES_DIR}/jacksum.sh" \
+--bundled-file "${RES_DIR}/${APP_JAR_FILE_HASHGARTEN}" \
+--bundled-file "${RES_DIR}/${APP_JAR_FILE_FLATLAF}" \
 --bundled-file "${RES_DIR}/${APP_LICENSE_FILE}" \
   "${RES_DIR}/install.command" \
   "${OUT_DIR}/${APP_NAME}"

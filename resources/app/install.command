@@ -20,14 +20,18 @@
 # Explicitly set the PATH
 PATH="/sbin:/usr/sbin:/bin:/usr/bin"
 
-JACKSUM_VERSION=3.5.0
+JACKSUM_VERSION=3.7.0
 PROGDIR=/Applications/Jacksum
 mkdir -p "$PROGDIR"
 
 CURRDIR="$(cd "$(dirname "$0")" && pwd)"
 
-echo "Copying jacksum-${JACKSUM_VERSION}.jar ..."
-cp "$CURRDIR/jacksum-${JACKSUM_VERSION}.jar" "${PROGDIR}/jacksum.jar"
+echo "Copying .jar files ..."
+cp "$CURRDIR"/*.jar "$PROGDIR"
+
+echo "Copying jacksum.sh ..."
+cp "$CURRDIR/jacksum.sh" "$PROGDIR"
+
 echo "Copying license.txt ..."
 cp "$CURRDIR/license.txt" "$PROGDIR"
 
@@ -60,7 +64,7 @@ LAUNCHER="$PROGDIR/jacksum"
 echo "Creating $LAUNCHER ..."
 cat << "EOL" > "$LAUNCHER"
 #!/bin/bash
-/Applications/Jacksum/javalauncher -jar "/Applications/Jacksum/jacksum.jar" "$@"
+/Applications/Jacksum/javalauncher -jar "/Applications/Jacksum/jacksum-3.7.0.jar" "$@"
 EOL
 chmod +x "$LAUNCHER"
 
@@ -70,14 +74,17 @@ else
     SCRIPTS="/Library/Scripts/Finder Scripts/Jacksum ${JACKSUM_VERSION}"
 fi
 mkdir -p "$SCRIPTS"
-ALGORITHMS="$(/Applications/Jacksum/jacksum -a all --list)"
-ALGOCOUNT=$(echo "$ALGORITHMS" | wc -l)
+#ALGORITHMS="$(/Applications/Jacksum/jacksum -a all --list)"
+COMMANDS="cmd_calc;1)_Calc_hash_values cmd_check;2)_Check_data_integrity cmd_cust;3)_Customized_output cmd_edit;4)_Edit_script cmd_help;5)_Help"
 
+TOTALCOUNT=$(echo "$COMMANDS" | wc -l)
 FINISHED=0
-for ALGO in $ALGORITHMS
+for i in $COMMANDS
 do
+  CMD="${i%;*}"; TXT="${i#*;}"; TXT="${TXT//_/ }"
+
   # the / is for folders, so we have to adjust the filename for e.g. SHA512/224
-  SCRIPT_NAME="${ALGO//\//-}"
+  SCRIPT_NAME="${TXT//\//-}"
   APPLE_SCRIPT="/tmp/${SCRIPT_NAME}.applescript"
   COMPILED_SCRIPT="${SCRIPTS}/${SCRIPT_NAME}.scpt"
   # Creating ${APPLE_SCRIPT}
@@ -95,23 +102,20 @@ repeat with i from 1 to the count of theseItems
   set thisFileQuoted to quoted form of thisFile
   set allFiles to allFiles & " " & thisFileQuoted
 end repeat
-set theCommand to "/Applications/Jacksum/jacksum -a ' >> "${APPLE_SCRIPT}"
-echo -n "$ALGO" >> "${APPLE_SCRIPT}"
-echo -n ' " & allFiles & " > /tmp/jacksum.txt; echo --- >> /tmp/jacksum.txt; echo Created with Jacksum '"${JACKSUM_VERSION}"', algorithm='"${ALGO}" >> "${APPLE_SCRIPT}"
-#echo -n "$ALGO" >> "${APPLE_SCRIPT}"
-echo ' >> /tmp/jacksum.txt"
-do shell script theCommand
-do shell script "open -e /tmp/jacksum.txt"' >> "${APPLE_SCRIPT}"
+set theCommand to "/Applications/Jacksum/jacksum.sh ' >> "${APPLE_SCRIPT}"
+echo -n "$CMD" >> "${APPLE_SCRIPT}"
+echo ' " & allFiles' >> "${APPLE_SCRIPT}"
+echo 'do shell script theCommand' >> "${APPLE_SCRIPT}"
 
   # Compiling to .applescript to .scpt
-  printf "Installing %s ...\n" "$ALGO"
+  printf "Installing menu %s ...\n" "$TXT"
   osacompile -d -o "${COMPILED_SCRIPT}" "${APPLE_SCRIPT}"
 
   # Clean up
   rm "${APPLE_SCRIPT}"
 
   FINISHED=$((FINISHED+1))
-  PERCENT=$((FINISHED*100/$ALGOCOUNT))
+  PERCENT=$((FINISHED*100/$TOTALCOUNT))
   printf "PROGRESS:%i\n" $PERCENT
 
 done
@@ -124,8 +128,8 @@ Make sure that you have activated the Apple Script Menu. Starting with
 Mac OS X 10.6 (Snow Leopard), the Script Menu preferences are at the Apple 
 Script-Editor's preferences, in the General tab.
 
-Go to Finder, select a folder or one or more files and choose an algorithm from
-the script folder called Jacksum in order to calculate checksums for the files.
+Go to Finder, select one or more files and directories and choose an entry
+from the script directory called Jacksum.
 
 Done.
 EOL

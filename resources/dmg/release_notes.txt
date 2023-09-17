@@ -1,5 +1,12 @@
 Release Notes
 -------------
+2.0.0, Sep 17, 2023
+- bundled Jacksum 3.7.0, and HashGarten 0.14.0
+- files/directories are passed from Finder to HashGarten (which is a graphical user
+  interface for Jacksum), and from HashGarten to Jacksum so we only have five menu entries
+  under the Jacksum script directory. With that change the user experience is the same
+  as it is on GNU/Linux and Microsoft Windows.
+
 1.3.0, Jan 29, 2023
 - bundled Jacksum 3.5.0
 

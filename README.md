@@ -63,7 +63,6 @@ Just run the .app again.
 
 Open a terminal and type
 ```
-cd
 rm -Rf ~/Library/Scripts/Applications/Finder/Jacksum*
 rm -Rf /Applications/Jacksum
 ```
@@ -94,7 +93,11 @@ Open a terminal and run
 ```
 ./bin/make_all.sh
 ```
-That will build the .app and wrap it in a .dmg. You find both the .app and the .dmg in the folder called ./output. 
+That will build the .app and wrap it in a .dmg. You find both the .app and the .dmg in the folder called ./output/.
+
+```
+open ./ouutput/*.dmg
+```
 
 ### How does that all work?
 

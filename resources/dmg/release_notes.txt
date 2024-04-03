@@ -1,5 +1,10 @@
 Release Notes
 -------------
+2.1.0, Apr 6, 2024
+- bundled Jacksum 3.7.0, and HashGarten 0.16.0
+- removed the Help menu under the Jacksum script directory, because the GUI provides
+  Help from now on.
+
 2.0.0, Sep 17, 2023
 - bundled Jacksum 3.7.0, and HashGarten 0.14.0
 - files/directories are passed from Finder to HashGarten (which is a graphical user

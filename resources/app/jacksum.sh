@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Jacksum File Browser Integration Script, https://jacksum.net
-# Copyright (c) 2006-2023 Johann N. Loefflmann, https://johann.loefflmann.net
+# Copyright (c) 2006-2024 Johann N. Loefflmann, https://johann.loefflmann.net
 # Code has been released under the conditions of the GPLv3+.
 #
 
@@ -15,7 +15,7 @@ ERROR_LOG="/tmp/jacksum-error.txt"
 CHECK_FILE="/tmp/jacksum-check.txt"
 JAVA="java"
 JACKSUM_JAR="/Applications/Jacksum/jacksum-3.7.0.jar"
-HASHGARTEN_JAR="/Applications/Jacksum/HashGarten-0.14.0.jar"
+HASHGARTEN_JAR="/Applications/Jacksum/HashGarten-0.16.0.jar"
 SCRIPT="/Applications/Jacksum/jacksum.sh"
 
 cat /dev/null > "$FILE_LIST"
@@ -44,35 +44,13 @@ case $ALGO in
 
   "cmd_calc")
     "${JAVA}" -jar "${HASHGARTEN_JAR}" --header -O relative -U ${ERROR_LOG} --file-list-format list --file-list ${FILE_LIST} --path-relative-to-entry 1 --verbose default,summary
-    rm relative > /dev/null 2>&1
-    if [ $? -eq 0 ]
-    then
-      # Generate an output that contains both stdout and stderr in a file for the viewer
-      # CHECK_FILE contains the output file name that the user has been specified at the GUI
-
-      CHECK_FILE=$(grep gui.output $HOME/.HashGarten.properties)
-      # We need to strip the key called gui.output= and undo any escapes done by Java''s properties API
-      CHECK_FILE=${CHECK_FILE#*=}
-
-      cat ${CHECK_FILE} ${ERROR_LOG} > ${OUTPUT}
-      viewer "${OUTPUT}"
-    fi
     ;;
 
   "cmd_check")
-    if [ ! -f relative ]; then
-      touch relative
-    fi
     "${JAVA}" -jar "${HASHGARTEN_JAR}" --header -c relative -O ${OUTPUT} -U ${OUTPUT} --file-list-format list --file-list ${FILE_LIST} --path-relative-to-entry 1 --verbose default,summary
-    rm relative > /dev/null 2>&1
-    if [ $? -eq 0 ]; then
-      viewer "${OUTPUT}"
-    fi
     ;;
 
-
   "cmd_cust")
-    cat /dev/null > "${OUTPUT}"
     ALGOS="md5+sha1+ripemd160+tiger+\
 sha256+sha512/256+sha3-256+shake128+ascon-hash+sm3+streebog256+kupyna-256+lsh-256-256+blake3+k12+keccak256+\
 sha512+sha3-512+shake256+streebog512+kupyna-512+lsh-512-512+blake2b-512+keccak512+m14+skein-512-512+whirlpool"
@@ -140,4 +118,3 @@ legacy message digests (avoid if possible):
     ;;
 
 esac
-

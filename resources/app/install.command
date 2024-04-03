@@ -1,7 +1,7 @@
 #!/bin/bash
 # 
 #  Jacksum File Browser Integration for macOS
-#  Copyright (c) 2010-2023 Dipl.-Inf. (FH) Johann N. Loefflmann
+#  Copyright (c) 2010-2024 Dipl.-Inf. (FH) Johann N. Loefflmann
 #
 #  This program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -75,7 +75,7 @@ else
 fi
 mkdir -p "$SCRIPTS"
 #ALGORITHMS="$(/Applications/Jacksum/jacksum -a all --list)"
-COMMANDS="cmd_calc;1)_Calc_hash_values cmd_check;2)_Check_data_integrity cmd_cust;3)_Customized_output cmd_edit;4)_Edit_script cmd_help;5)_Help"
+COMMANDS="cmd_calc;1)_Calc_hash_values cmd_check;2)_Check_data_integrity cmd_cust;3)_Customized_output cmd_edit;4)_Edit_script"
 
 TOTALCOUNT=$(echo "$COMMANDS" | wc -l)
 FINISHED=0
@@ -122,14 +122,18 @@ done
 
 cat << EOL
 
-Jacksum has been integrated into the Finder's script menu.
+Jacksum and HashGarten have been integrated
+into the Finder's script menu.
 
-Make sure that you have activated the Apple Script Menu. Starting with
-Mac OS X 10.6 (Snow Leopard), the Script Menu preferences are at the Apple 
-Script-Editor's preferences, in the General tab.
+Make sure that you have activated the Apple
+Script Menu. Starting with Mac OS X 10.6
+(Snow Leopard), the Script Menu preferences
+are at the Apple Script-Editor's preferences,
+in the General tab.
 
-Go to Finder, select one or more files and directories and choose an entry
-from the script directory called Jacksum.
+Go to Finder, select files and directories and
+choose an entry from the script directory
+called "Jacksum 3.7.0".
 
 Done.
 EOL

@@ -6,9 +6,9 @@
 
 ## Abstract
 
-Allows macOS users to calculate hash values of their files and folders in Finder,
-just by selecting the algorithm of choice from the script menu.
-The Finder integration is powered both
+Allows macOS users to calculate hash values of their files and folders in Finder just by selecting a menu item from the script menu.
+
+The Finder integration is powered by both
 **[Jacksum](https://github.com/jonelo/jacksum)** (the engine) and
 **[HashGarten](https://github.com/jonelo/HashGarten)** (the GUI).
 
@@ -25,21 +25,21 @@ See also [https://jacksum.net](https://jacksum.net).
 
 ### How to install it
 
-#### Download and install a Java Development Kit (JDK)
+#### 1. Download and install a Java Runtime Environment
 
-Go to [https://adoptium.net](https://adoptium.net)
+Go to [https://adoptium.net](https://adoptium.net) and download and install Temurin which is the OpenJDK-distribution from Adoptium. A Java Runtime Environment (JRE) is enough, but you can also install a full Java Development Kit (JDK).
 
-#### Activate the Apple Script Menu
+#### 2. Activate the Apple Script Menu
 
 See also [https://support.apple.com/en-us/guide/script-editor/scpedt27975/mac](https://support.apple.com/en-us/guide/script-editor/scpedt27975/mac)
 
 <img height="462" alt="Apple Script Menu activated" src="docs/images/AppleScriptMenuActivated.png">
 
-#### Download and open the .dmg
+#### 3. Download and open the .dmg
 
-Download and open the [.dmg](https://github.com/jonelo/jacksum-fbi-macos/releases/latest),
+Download and open the [.dmg](https://github.com/jonelo/jacksum-fbi-macos/releases/latest).
 
-#### Open on the .app
+#### 4. Open on the .app
 
 <img alt="Open the Jacksum Finder Integration app" src="docs/images/JacksumFinderIntegrationOpen.png">
 
@@ -47,16 +47,15 @@ Download and open the [.dmg](https://github.com/jonelo/jacksum-fbi-macos/release
 
 #### Using Finder and the script menu
 
-Go to Finder, select files and folders and choose an action from the script folder called "Jacksum 3.7.0"
-pass those paths to HashGarten where you can calculate checksums, CRCs and hash values of the selected files.
+Go to Finder, select files and folders and choose an action from the script folder called "Jacksum 3.7.0".
 
 <img height="353" alt="Jacksum at the Script Menu" src="docs/images/JacksumAtTheScriptMenu.png">
 
-From here [HashGarten](https://github.com/jonelo/HashGarten) takes over.
+From here [HashGarten](https://github.com/jonelo/HashGarten) takes over, and you can calculate checksums, CRCs and hash values of the selected files.
 
-#### Using the command line interface
+#### Using the command line interface (CLI)
 
-Open a Terminal, and use all features that Jacksum provides.
+Open a Terminal, and you have full access to the CLI. Now you can use all features that Jacksum provides.
 
 ```
 $ /Applications/Jacksum/jacksum

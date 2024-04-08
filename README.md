@@ -81,16 +81,16 @@ rm -Rf /Applications/Jacksum
 ```
 
 
-## Tech details
+## For Developers
 
 ### How to create the .app and .dmg
 
-#### Download and install the Platypus command line tool
+#### 1. Download and install the Platypus command line tool
 
 The .app will be created by the Platypus command line tool. Platypus is a great tool create Mac apps from command line scripts.
 Go to https://sveinbjorn.org/platypus, download and open Platypus, select "Settings..." from the Platypus menu and install the command line tool.
 
-#### Clone the sources
+#### 2. Clone the sources
 
 Clone or download the sources from the GitHub project:
 ```
@@ -100,13 +100,15 @@ cd jacksum-fbi-macos/
 
 Note: if you haven't installed git yet, Apple's Install Command Line Developer Tools will install it for you.
 
-#### Run the make_all.sh
+#### 3. Build both the .app and the .dmg
 
 Open a terminal and run
 ```
 ./bin/make_all.sh
 ```
 That will build the .app and wrap it in a .dmg. You find both the .app and the .dmg in the folder called ./output/.
+
+#### 4. Open the .dmg and test the .app
 
 ```
 open ./output/*.dmg
@@ -115,4 +117,3 @@ open ./output/*.dmg
 ### How does that all work?
 
 The core of the .app is bash script that installs calls to HashGarten and Jacksum to macOS Finder's Script Menu by creating applescript scripts and compiling those on the system during the installation.
-

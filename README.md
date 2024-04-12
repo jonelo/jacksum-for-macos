@@ -117,3 +117,7 @@ open ./output/*.dmg
 ### How does that all work?
 
 The core of the .app is bash script that installs calls to HashGarten and Jacksum to macOS Finder's Script Menu by creating applescript scripts and compiling those on the system during the installation.
+
+## Show your support
+
+Please ⭐️ this repository if this project helped you!

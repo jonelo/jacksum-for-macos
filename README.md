@@ -18,6 +18,7 @@ See also [https://jacksum.net](https://jacksum.net).
 
 - OS X 10.8 (Mountain Lion) or later, tested up to macOS 14.4.1 (Sonoma)
 - Finder
+- Apple Script Menu enabled
 - JDK 11 or later, see also [https://adoptium.net](https://adoptium.net)
 - 2 MiB disk space for Jacksum and HashGarten
 

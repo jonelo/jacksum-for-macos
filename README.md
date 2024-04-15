@@ -16,12 +16,18 @@ See also [https://jacksum.net](https://jacksum.net).
 
 ## System Requirements
 
-- OS X 10.8 (Mountain Lion) or later, tested up to macOS 14.4.1 (Sonoma)
-- A supported file browser (see below)
-- JDK 11 or later, see also [https://adoptium.net](https://adoptium.net)
-- 2 MiB disk space for Jacksum and HashGarten
+### Hardware
 
-### Supported File Managers
+- Intel Mac (x64) or Apple silicon (aarch64)
+- 2 MiB disk space
+
+### Software
+
+- OS X 10.8 (Mountain Lion) or later, tested up to macOS 14.4.1 (Sonoma)
+- JDK 11 or later, see also [https://adoptium.net](https://adoptium.net)
+- A supported file manager (see below)
+
+#### Supported File Managers
 
 Any file manager that supports The **Apple Script Menu**-Interface is fully supported by this integration program.
 

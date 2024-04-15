@@ -17,10 +17,31 @@ See also [https://jacksum.net](https://jacksum.net).
 ## System Requirements
 
 - OS X 10.8 (Mountain Lion) or later, tested up to macOS 14.4.1 (Sonoma)
-- Finder
-- Apple Script Menu enabled
+- A supported file browser (see below)
 - JDK 11 or later, see also [https://adoptium.net](https://adoptium.net)
 - 2 MiB disk space for Jacksum and HashGarten
+
+### Supported File Managers
+
+Any file manager that supports The **Apple Script Menu**-Interface is fully supported by this integration program.
+
+> [!TIP]
+> If your preferred file manager does not support the Apple Script Menu, nor allow to use any external scripts nor support any plug-ins, chances are high that your file manager supports at least **drag & drop**, so you could use drag & drop to transfer file/directory-paths from your file manager to the HashGarten GUI where you can process data further, e. g. calculate hashes from file/directory-paths.
+
+The following File Managers have been tested successfully to work with Jacksum and HashGarten:
+
+| File Manager                                                                   | Supported Interfaces  | Comment                                                                                  |
+|--------------------------------------------------------------------------------|-----------------------|------------------------------------------------------------------------------------------|
+| [Finder](https://support.apple.com/guide/mac-help/mchlp2605/mac)               | DnD + Script Menu     | Commercial Software, the standard file manager from Apple                                |
+| [ForkLift 4](https://binarynights.com/)                                        | DnD + proprietary API | Commercial Software, [few manual actions required](https://github.com/jonelo/jacksum-fbi-macos/wiki/ForkLift-4)   |
+| [Nimble Commander](https://magnumbytes.com)                                    | DnD                   | Free/Libre Open Source Software (GPLv3)                                                  |
+| [VioletGiraffe FileCommander](https://github.com/VioletGiraffe/file-commander) | DnD                   | Free/Libre Open Source Software (Apache 2.0)                                             |
+| [EasyFind](https://www.devontechnologies.com/en/apps/freeware)                 | DnD                   | Freeware                                                                                 |
+| [Commander One](https://mac.eltima.com/file-manager.html)                      | DnD                   | Commercial Software                                                                      |
+| [CRAX Commander](https://crax.soft4u2.com)                                     | DnD                   | Commercial Software (Demo)                                                               |
+| [Transmit](https://panic.com/transmit)                                         | DnD                   | Commercial Software (Trial)                                                              |
+
+
 
 ## Quick Start
 

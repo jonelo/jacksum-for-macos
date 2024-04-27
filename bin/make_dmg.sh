@@ -1,6 +1,6 @@
 #!/bin/bash
-# creates an .dmg by using the props from config/make_dmg.cfg
-# (c) 2021 Johann N. Löfflmann, <https://johann.loefflmann.net>
+# Creates a .dmg by using the props from config/make_dmg.cfg
+# (c) 2021-2024 Johann N. Löfflmann, <https://johann.loefflmann.net>
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 CFG_DIR="${SCRIPT_DIR}/../resources"
@@ -9,6 +9,7 @@ OUT_DIR="${SCRIPT_DIR}/../output"
 WORK_DIR="/tmp/dmg-creation.$$"
 
 source ${CFG_DIR}/make_all.cfg
+source ${CFG_DIR}/make_app.cfg
 source ${CFG_DIR}/make_dmg.cfg
 
 mkdir -p "${OUT_DIR}"
@@ -27,9 +28,11 @@ DEVICE=${MOUNT%% *}
 
 # copy everything to the image
 cp -R "${OUT_DIR}/$APP_NAME" "$MOUNTPOINT/$APP_NAME"
-cp $RES_DIR/readme.txt "$MOUNTPOINT/"
+cp $RES_DIR/readme.pdf "$MOUNTPOINT/"
 cp $RES_DIR/release_notes.txt "$MOUNTPOINT/"
 cp $RES_DIR/license.txt "$MOUNTPOINT/"
+
+#cp -R "${CFG_DIR}/app/HashGarten.app" "$MOUNTPOINT/HashGarten.app"
 
 # background handler
 # rm -Rf $MOUNTPOINT/.background

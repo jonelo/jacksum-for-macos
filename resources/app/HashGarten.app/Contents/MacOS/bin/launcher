@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+# app specific variables
+APP_NAME="HashGarten"
+MAIN_JAR="HashGarten-0.17.0.jar"
+
+# this script is stored in what folder?
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
+# important! We have to change to folder
+# where the jar files have been stored
+cd "$SCRIPT_DIR/../lib/"
+
+# calling the JVM
+"${SCRIPT_DIR}/../../Java/jre_latest/Contents/Home/bin/java" \
+  -Dapple.laf.useScreenMenuBar=true \
+  -Dcom.apple.macos.useScreenMenuBar=true \
+  -Dcom.apple.macos.use-file-dialog-packages=true \
+  -Dcom.apple.mrj.application.apple.menu.about.name="$APP_NAME" \
+  -Xdock:name="$APP_NAME" \
+  -Xdock:icon="$SCRIPT_DIR/../../Resources/Jacksum.icns" \
+  -jar "$MAIN_JAR" "$@"
+
+exit 0
+

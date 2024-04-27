@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>bin/launcher</string>
+	<key>CFBundleGetInfoString</key>
+	<string>HashGarten 0.17/Jacksum 3.7.0</string>
+	<key>CFBundleIconFile</key>
+	<string>Jacksum.icns</string>
+	<key>CFBundleIdentifier</key>
+	<string>net.jacksum.HashGarten</string>
+	<key>CFBundleDisplayName</key>
+	<string>HashGarten/Jacksum</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>(c) 2001-2024 Johann N. Löfflmann</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>HashGarten/Jacksum</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>jlhgjs</string>
+	<key>CFBundleShortVersionString</key>
+	<string>2.8.0</string>
+	<key>CFBundleVersion</key>
+	<string>2024.04.21</string>
+	<key>NSAppleScriptEnabled</key>
+	<string>NO</string>
+</dict>
+</plist>

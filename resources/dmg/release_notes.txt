@@ -1,5 +1,10 @@
 Release Notes
 -------------
+2.2.0, Apr 27, 2024
+- bundles Jacksum 3.7.0, and HashGarten 0.17.0, and OpenJDK Runtime 21.0.3 from adoptium.net (for x64 and Apple silicon architectures)
+- HashGarten can be started also standalone from /Applications/HashGarten.app
+- addedd support for Path Finder and muCommander
+
 2.1.0, Apr 6, 2024
 - bundled Jacksum 3.7.0, and HashGarten 0.16.0
 - removed the Help menu under the Jacksum script directory, because the GUI provides

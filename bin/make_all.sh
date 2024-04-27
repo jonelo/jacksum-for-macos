@@ -9,3 +9,5 @@ ${SCRIPT_DIR}/make_dmg.sh
 OUT="${SCRIPT_DIR}/../output"
 echo "both .app and .dmg have been stored in ${OUT}" 
 ls -la "${OUT}"
+open "${SCRIPT_DIR}/../output/"
+

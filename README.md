@@ -2,19 +2,19 @@
 
 # Jacksum for macOS
 
-<img width="737" alt="Jacksum on macOS" src="https://github.com/jonelo/jacksum-fbi-macos/assets/10409423/1da52ca3-6e24-4b4b-9954-a2bb2e67e427">
+<img width="737" alt="Screenshot 2024-04-27 at 23 26 45" src="https://github.com/jonelo/jacksum-fbi-macos/assets/10409423/b0846070-b61f-4e74-b8bb-5dc3e6c0eaa1">
 
 
 ## Abstract
 
-Jacksum for macOS is an installation program that gives you easy access to the functions of Jacksum on macOS.
-In other words, you can add more than 450 hash functions for free to your Mac to make it even more powerful.
+Jacksum for macOS is an installation program with which you can easily access functions of [Jacksum](https://github.com/jonelo/jacksum) on macOS.
+In other words, it adds more than 450 hash algorithms to your Mac and you can use them with different user interfaces.
 
 The installation program installs
 
-- a **Graphical User Interface** called [HashGarten](https://github.com/jonelo/HashGarten) which is powered by Jacksum
-- Integraions for **File Managers**, see the section of "Supported File Managers" below
-- a **Command Line Inerface** to call [Jacksum](https://github.com/jonelo/jacksum) in a Terminal
+- a standalone **graphical user interface** (GUI) called [HashGarten](https://github.com/jonelo/HashGarten) which uses Jacksum as engine
+- **file manager integration** of Jacksum and HashGarten for Finder, Path Finder, and muCommander
+- a script for direct access to the **command line interface** (CLI) of Jacksum in a Terminal
 
 For more information see also [https://jacksum.net](https://jacksum.net).
 
@@ -66,11 +66,11 @@ Control-click on the app icon, and choose Open from the shortcut menu. Gatekeepe
 
 <img alt="Open the Jacksum Finder Integration app" src="docs/images/JacksumFinderIntegrationOpen.png">
 
-Alternatively, you can bypass the installer and run the script directly that is bundled with the installer. Example for Jacksum 3.7.0:
+Alternatively, you can open a Terminal to bypass the graphical installation program and run the script directly that is bundled with the installer app. Example for Jacksum 3.7.0:
 
 ```
-$ cd /Volumes/Jacksum\ for\ macOS
-$ ./Jacksum\ 3.7.0\ for\ macOS.app/Contents/Resources/script
+% cd /Volumes/Jacksum\ for\ macOS
+% ./Jacksum\ 3.7.0\ for\ macOS.app/Contents/Resources/script
 ```
 
 ## How to use it
@@ -83,7 +83,7 @@ Open the Spotlight Search and search for HashGarten or go to Applications and op
 
 ### Using Finder and the Script Menu
 
-Go to Finder, select files and folders and choose an action from the script folder called "Jacksum 3.7.0".
+Go to Finder, select files and folders and choose an action from the Jacksum script folder.
 
 <img height="353" alt="Jacksum at the Script Menu" src="docs/images/JacksumAtTheScriptMenu.png">
 
@@ -94,41 +94,51 @@ From here [HashGarten](https://github.com/jonelo/HashGarten) takes over, and you
 Open a Terminal to get full access to the CLI. Now you can use all features that Jacksum provides.
 
 ```
-$ /Applications/HashGarten.app/jacksum
+% /Applications/HashGarten.app/jacksum
 ```
 
 For more information see also [Jacksum](https://github.com/jonelo/jacksum)
 
-### How to configure it
+## How to configure it
 
-#### Finder
+### Finder
 
 Open Finder, click on the script menu, and select "Open Scripts Folder", followed by "Open Finder Scripts Folder".
 Alternatively hit ⇧⌘G, enter the path to the Finder scripts folder `~/Library/Scripts/Applications/Finder`, and click on the Go button.
 
 Click on `Jacksum 3.7.0`, and remove any .scpt file that you do not want to see.
 
-#### Path Finder
+### Path Finder
 
 Open Path Finder, click on the script menu, and select "Open Scripts Folder", followed by "Open Path Finder Scripts Folder".
 Click on `Jacksum 3.7.0`, and remove any .scpt file that you do not want to see.
 
+### muCommander
+
+Modify the content of `~/Library/Preferences/muCommander/commands.xml` to match your needs.
 
 ### How to recreate all items again
 
-Just run the .app again.
+Just run the Jacksum for macOS.app again.
 
-### How to uninstall it
+## How to uninstall it
 
-Open a terminal and type
+Open a Terminal and type
 ```
-rm -Rf ~/Library/Scripts/Applications/Finder/Jacksum*
-rm -Rf /Applications/HashGarten.app
+% rm -rf /Applications/HashGarten.app
+% rm -rf ~/Library/Scripts/Applications/Finder/Jacksum*
 ```
-If muCommander was found during installation, also type
 
+If Path Finder was found during installation type
 ```
-rm ~/Library/Preferences/muCommander/commands.xml
+% rm -rf ~/Library/Scripts/Applications/Path\ Finder/Jacksum*
+```
+
+If muCommander was found during installation type
+```
+% rm ~/Library/Preferences/muCommander/commands.xml
+% cp ~/Library/Preferences/muCommander/commands.xml.before_jacksum.* ~/Library/Preferences/muCommander/commands.xml
+% rm ~/Library/Preferences/muCommander/commands.xml.before_jacksum.*
 ```
 
 
@@ -145,8 +155,8 @@ Go to https://sveinbjorn.org/platypus, download and open Platypus, select "Setti
 
 Clone or download the sources from the GitHub project:
 ```
-git clone https://github.com/jonelo/jacksum-fbi-macos.git
-cd jacksum-fbi-macos/
+% git clone https://github.com/jonelo/jacksum-fbi-macos.git
+% cd jacksum-fbi-macos/
 ```
 
 Note: if you haven't installed git yet, Apple's Install Command Line Developer Tools will install it for you.
@@ -157,7 +167,7 @@ Open a terminal and run
 ```
 ./bin/make_all.sh
 ```
-That will build the .app and wrap it in a .dmg. You find both the .app and the .dmg in the folder called ./output/.
+That will build the .app and wrap it in a .dmg. You find both the .app and the .dmg in the folder called `./output/`.
 
 #### 4. Open the .dmg and test the .app
 
@@ -165,20 +175,21 @@ That will build the .app and wrap it in a .dmg. You find both the .app and the .
 open ./output/*.dmg
 ```
 
-### The installation script
+### Interna of the installation app
 
-The core of the Jacksum for macOS.app is a bash script that installs both HashGarten and Jacksum to the Finder's Script Menu (and other file managers it can detect) by creating applescript scripts (in case of Finder, and Path Finder), and compiling those on the system during the installation.
+The core of the Jacksum for macOS.app is a bash script that installs both HashGarten and Jacksum to the Finder's Script Menu (and other file managers it can detect) by creating applescript scripts (in case of Finder and Path Finder), and compiling those on the system during the installation using osacompile.
 
-The installation script is written in bash, it requires Mac OS X 10.4 (Tiger) or later to run. The script does not require admin privileges.
+The installation script requires Mac OS X 10.4 (Tiger) or later to run. The script does not require admin privileges.
 Credits: the installer app has been created by [Platypus](https://sveinbjorn.org/platypus), a great app to wrap shell scripts into a macOS app.
 
-Once compiled with Platypus, the installer script source can be revealed again by entering
+Once the script has been compiled by Platypus, the installer app requires macOS 10.11 or later.
+The script source can be revealed again by typing
 ```
 $ cd /Volumes/Jacksum\ for\ macOS/
 $ cat ./Jacksum\ 3.7.0\ for\ macOS.app/Contents/Resources/script
 ```
 
-The source code of the generate, and compiled applescripts can be relealed again by opening the .scpt files (located in the appropriate sccript folders) usiing the
+The source code of the generated and compiled applescripts can be relealed again by opening the .scpt files (located in the appropriate sccript folders) usiing the
 Apple Script Editor or osadecompile.
 
 

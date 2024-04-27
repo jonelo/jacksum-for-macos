@@ -287,10 +287,10 @@ menu for the following file managers:
 EOL
 
   printf "  - Finder\n"
-  if [ $PATH_FINDER=1 ]; then
+  if [ $PATH_FINDER = 1 ]; then
     printf "  - Path Finder\n"
   fi
-  if [ $MUCOMMANDER=1 ]; then
+  if [ $MUCOMMANDER = 1 ]; then
     printf "  - muCommander\n"
   fi
 
@@ -344,12 +344,12 @@ function setupJava {
   # Extract the correct JRE, dependent on the arch of the system
   ARCH=$(uname -m)
   printf "Copying JRE for arch %s to %s ..." "$ARCH" "$TARGET"
-  if [ $ARCH="x86_64" ]; then
+  if [ $ARCH = "x86_64" ]; then
     tar -xvf "${SCRIPT_DIR}"/*x64*.tar.gz -C "$TARGET" 2>/dev/null
-  elif [ $ARCH="arm64" ]; then
+  elif [ $ARCH = "arm64" ]; then
     tar -xvf "${SCRIPT_DIR}"/*aarch64*.tar.gz -C "$TARGET" 2>/dev/null
   else
-    printf "ERROR: no suitable JRE found for arch %s." "$arch"
+    printf "ERROR: no suitable JRE found for arch %s." "$ARCH"
   fi
   if [ $? -eq 0 ]; then
     printf "done.\n"

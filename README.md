@@ -1,35 +1,38 @@
 ![GitHub downloads](https://img.shields.io/github/downloads/jonelo/jacksum-fbi-macos/total?color=green)
 
-# Jacksum File Browser Integration on macOS
+# Jacksum for macOS
 
-<img alt="Jacksum_3.7.0_Finder_Integration" src="docs/images/Jacksum_3.7.0_Finder_Integration.png" >
+<img width="737" alt="Jacksum on macOS" src="https://github.com/jonelo/jacksum-fbi-macos/assets/10409423/1da52ca3-6e24-4b4b-9954-a2bb2e67e427">
+
 
 ## Abstract
 
-Allows macOS users to calculate hash values of their files and folders in Finder just by selecting a menu item from the script menu.
+Jacksum for macOS is an installation program that gives you easy access to the functions of Jacksum on macOS.
+In other words, you can add more than 450 hash functions for free to your Mac to make it even more powerful.
 
-The Finder integration is powered by both
-**[Jacksum](https://github.com/jonelo/jacksum)** (the engine) and
-**[HashGarten](https://github.com/jonelo/HashGarten)** (the GUI).
+The installation program installs
 
-See also [https://jacksum.net](https://jacksum.net).
+- a **Graphical User Interface** called [HashGarten](https://github.com/jonelo/HashGarten) which is powered by Jacksum
+- Integraions for **File Managers**, see the section of "Supported File Managers" below
+- a **Command Line Inerface** to call [Jacksum](https://github.com/jonelo/jacksum) in a Terminal
+
+For more information see also [https://jacksum.net](https://jacksum.net).
 
 ## System Requirements
 
 ### Hardware
 
 - Intel Mac (x64) or Apple silicon (aarch64)
-- 2 MiB disk space
+- 150 MiB disk space
 
 ### Software
 
-- OS X 10.8 (Mountain Lion) or later, tested up to macOS 14.4.1 (Sonoma)
-- JDK 11 or later, see also [https://adoptium.net](https://adoptium.net)
+- macOS 10.11 (El Capitan) or later, tested up to macOS 14.4.1 (Sonoma)
 - A supported file manager (see below)
 
 #### Supported File Managers
 
-Any file manager that supports The **Apple Script Menu**-Interface is fully supported by this integration program.
+File managers that supports The **Apple Script Menu**-Interface are fully supported by this integration program. In adddition to that a few proprietary interfaces are also supported.
 
 > [!TIP]
 > If your preferred file manager does not support the Apple Script Menu, nor allow to use any external scripts nor support any plug-ins, chances are high that your file manager supports at least **drag & drop**, so you could use drag & drop to transfer file/directory-paths from your file manager to the HashGarten GUI where you can process data further, e. g. calculate hashes from file/directory-paths.
@@ -37,43 +40,48 @@ Any file manager that supports The **Apple Script Menu**-Interface is fully supp
 The following File Managers have been tested successfully to work with Jacksum and HashGarten:
 
 | File Manager                                                                   | Supported Interfaces  | Comment                                                                                  |
-|--------------------------------------------------------------------------------|-----------------------|------------------------------------------------------------------------------------------|
-| [Finder](https://support.apple.com/guide/mac-help/mchlp2605/mac)               | DnD + Script Menu     | Commercial Software, the standard file manager from Apple                                |
+|--------------------------------------------------------------------------------|-----------------------|---------------------------------------------------------------|
+| [Finder](https://support.apple.com/guide/mac-help/mchlp2605/mac)               | DnD + Script Menu     | Commercial Software, the standard file manager from Apple     |
+| [muCommander](https://www.mucommander.com)                                     | DnD + proprietary API | Free/Libre Open Source Software (GPLv3)                       |
+| [Path Finder](https://www.cocoatech.io)                                        | DnD + Script Menu     | Commercial Software                                           |
 | [ForkLift 4](https://binarynights.com/)                                        | DnD + proprietary API | Commercial Software, [few manual actions required](https://github.com/jonelo/jacksum-fbi-macos/wiki/ForkLift-4)   |
-| [Nimble Commander](https://magnumbytes.com)                                    | DnD                   | Free/Libre Open Source Software (GPLv3)                                                  |
-| [VioletGiraffe FileCommander](https://github.com/VioletGiraffe/file-commander) | DnD                   | Free/Libre Open Source Software (Apache 2.0)                                             |
-| [EasyFind](https://www.devontechnologies.com/en/apps/freeware)                 | DnD                   | Freeware                                                                                 |
-| [Commander One](https://mac.eltima.com/file-manager.html)                      | DnD                   | Commercial Software                                                                      |
-| [CRAX Commander](https://crax.soft4u2.com)                                     | DnD                   | Commercial Software (Demo)                                                               |
-| [Transmit](https://panic.com/transmit)                                         | DnD                   | Commercial Software (Trial)                                                              |
+| [Nimble Commander](https://magnumbytes.com)                                    | DnD                   | Free/Libre Open Source Software (GPLv3)                       |
+| [VioletGiraffe FileCommander](https://github.com/VioletGiraffe/file-commander) | DnD                   | Free/Libre Open Source Software (Apache 2.0)                  |
+| [EasyFind](https://www.devontechnologies.com/en/apps/freeware)                 | DnD                   | Freeware                                                      |
+| [Commander One](https://mac.eltima.com/file-manager.html)                      | DnD                   | Commercial Software                                           |
+| [CRAX Commander](https://crax.soft4u2.com)                                     | DnD                   | Commercial Software (Demo)                                    |
+| [Transmit](https://panic.com/transmit)                                         | DnD                   | Commercial Software (Trial)                                   |
 
 
 
-## Quick Start
+## Installation
 
-### How to install it
-
-#### 1. Download and install a Java Runtime Environment
-
-Go to [https://adoptium.net](https://adoptium.net) and download and install Temurin which is the OpenJDK-distribution from Adoptium. A Java Runtime Environment (JRE) is enough, but you can also install a full Java Development Kit (JDK).
-
-#### 2. Activate the Apple Script Menu
-
-See also [https://support.apple.com/en-us/guide/script-editor/scpedt27975/mac](https://support.apple.com/en-us/guide/script-editor/scpedt27975/mac)
-
-<img height="462" alt="Apple Script Menu activated" src="docs/images/AppleScriptMenuActivated.png">
-
-#### 3. Download and open the .dmg
+#### 1. Download and open the .dmg
 
 Download and open the [.dmg](https://github.com/jonelo/jacksum-fbi-macos/releases/latest).
 
-#### 4. Open on the .app
+#### 2. Open on the .app
+
+Control-click on the app icon, and choose Open from the shortcut menu. Gatekeeper warns you about the app, but gives you the option to bypass its default policy and open the app.
 
 <img alt="Open the Jacksum Finder Integration app" src="docs/images/JacksumFinderIntegrationOpen.png">
 
-### How to use it
+Alternatively, you can bypass the installer and run the script directly that is bundled with the installer. Example for Jacksum 3.7.0:
 
-#### Using Finder and the script menu
+```
+$ cd /Volumes/Jacksum\ for\ macOS
+$ ./Jacksum\ 3.7.0\ for\ macOS.app/Contents/Resources/script
+```
+
+## How to use it
+
+### Using HashGarten
+
+Open the Spotlight Search and search for HashGarten or go to Applications and open HashGarten.
+
+<img width="558" alt="Spotlight Search" src="https://github.com/jonelo/jacksum-fbi-macos/assets/10409423/f57c53d2-8fad-41a3-8f65-229c838db8e3">
+
+### Using Finder and the Script Menu
 
 Go to Finder, select files and folders and choose an action from the script folder called "Jacksum 3.7.0".
 
@@ -81,20 +89,30 @@ Go to Finder, select files and folders and choose an action from the script fold
 
 From here [HashGarten](https://github.com/jonelo/HashGarten) takes over, and you can calculate checksums, CRCs and hash values of the selected files.
 
-#### Using the command line interface (CLI)
+### Using the Command Line Interface (CLI)
 
-Open a Terminal, and you have full access to the CLI. Now you can use all features that Jacksum provides.
+Open a Terminal to get full access to the CLI. Now you can use all features that Jacksum provides.
 
 ```
-$ /Applications/Jacksum/jacksum
+$ /Applications/HashGarten.app/jacksum
 ```
 
 For more information see also [Jacksum](https://github.com/jonelo/jacksum)
 
 ### How to configure it
 
-Open Finder, hit ⇧⌘G, enter the path to the Finder scripts folder `~/Library/Scripts/Applications/Finder`, and click on the Go button.
+#### Finder
+
+Open Finder, click on the script menu, and select "Open Scripts Folder", followed by "Open Finder Scripts Folder".
+Alternatively hit ⇧⌘G, enter the path to the Finder scripts folder `~/Library/Scripts/Applications/Finder`, and click on the Go button.
+
 Click on `Jacksum 3.7.0`, and remove any .scpt file that you do not want to see.
+
+#### Path Finder
+
+Open Path Finder, click on the script menu, and select "Open Scripts Folder", followed by "Open Path Finder Scripts Folder".
+Click on `Jacksum 3.7.0`, and remove any .scpt file that you do not want to see.
+
 
 ### How to recreate all items again
 
@@ -105,11 +123,16 @@ Just run the .app again.
 Open a terminal and type
 ```
 rm -Rf ~/Library/Scripts/Applications/Finder/Jacksum*
-rm -Rf /Applications/Jacksum
+rm -Rf /Applications/HashGarten.app
+```
+If muCommander was found during installation, also type
+
+```
+rm ~/Library/Preferences/muCommander/commands.xml
 ```
 
 
-## For Developers
+## Developers Notes
 
 ### How to create the .app and .dmg
 
@@ -142,9 +165,22 @@ That will build the .app and wrap it in a .dmg. You find both the .app and the .
 open ./output/*.dmg
 ```
 
-### How does that all work?
+### The installation script
 
-The core of the .app is bash script that installs calls to HashGarten and Jacksum to macOS Finder's Script Menu by creating applescript scripts and compiling those on the system during the installation.
+The core of the Jacksum for macOS.app is a bash script that installs both HashGarten and Jacksum to the Finder's Script Menu (and other file managers it can detect) by creating applescript scripts (in case of Finder, and Path Finder), and compiling those on the system during the installation.
+
+The installation script is written in bash, it requires Mac OS X 10.4 (Tiger) or later to run. The script does not require admin privileges.
+Credits: the installer app has been created by [Platypus](https://sveinbjorn.org/platypus), a great app to wrap shell scripts into a macOS app.
+
+Once compiled with Platypus, the installer script source can be revealed again by entering
+```
+$ cd /Volumes/Jacksum\ for\ macOS/
+$ cat ./Jacksum\ 3.7.0\ for\ macOS.app/Contents/Resources/script
+```
+
+The source code of the generate, and compiled applescripts can be relealed again by opening the .scpt files (located in the appropriate sccript folders) usiing the
+Apple Script Editor or osadecompile.
+
 
 ## Show your support
 

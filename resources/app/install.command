@@ -231,7 +231,7 @@ function setup {
   FM="$1"
   printf "Installing menu entries for %s\n" "$FM"
 
-  if [ $(id | cut -c5) -ne 0 ]; then
+  if [ "$(id | cut -c5)" -ne 0 ]; then
     SCRIPTS="${HOME}/Library/Scripts/Applications/${FM}/Jacksum ${JACKSUM_VERSION}"
   else
     SCRIPTS="/Library/Scripts/${FM} Scripts/Jacksum ${JACKSUM_VERSION}"

@@ -12,7 +12,6 @@ viewer() {
 FILE_LIST="/tmp/jacksum—filelist.txt"
 OUTPUT="/tmp/jacksum-output.txt"
 ERROR_LOG="/tmp/jacksum-error.txt"
-CHECK_FILE="/tmp/jacksum-check.txt"
 JAVA="/Applications/HashGarten.app/Contents/Java/jre_latest/Contents/Home/bin/java"
 LAUNCHER="/Applications/HashGarten.app/Contents/MacOS/bin/launcher"
 JACKSUM_JAR="/Applications/HashGarten.app/Contents/MacOS/lib/jacksum-3.7.0.jar"

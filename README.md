@@ -163,16 +163,16 @@ Note: if you haven't installed git yet, Apple's Install Command Line Developer T
 
 #### 3. Build both the .app and the .dmg
 
-Open a terminal and run
+Open a Terminal and run
 ```
-./bin/make_all.sh
+% ./bin/make_all.sh
 ```
 That will build the .app and wrap it in a .dmg. You find both the .app and the .dmg in the folder called `./output/`.
 
 #### 4. Open the .dmg and test the .app
 
 ```
-open ./output/*.dmg
+% open ./output/*.dmg
 ```
 
 ### Interna of the installation app
@@ -185,8 +185,8 @@ Credits: the installer app has been created by [Platypus](https://sveinbjorn.org
 Once the script has been compiled by Platypus, the installer app requires macOS 10.11 or later.
 The script source can be revealed again by typing
 ```
-$ cd /Volumes/Jacksum\ for\ macOS/
-$ cat ./Jacksum\ 3.7.0\ for\ macOS.app/Contents/Resources/script
+% cd /Volumes/Jacksum\ for\ macOS/
+% cat ./Jacksum\ 3.7.0\ for\ macOS.app/Contents/Resources/script
 ```
 
 The source code of the generated and compiled applescripts can be relealed again by opening the .scpt files (located in the appropriate sccript folders) usiing the
@@ -195,4 +195,4 @@ Apple Script Editor or osadecompile.
 
 ## Show your support
 
-Please ⭐️ this repository if this project helped you!
+Please ⭐️ [this repository](https://github.com/jonelo/jacksum-fbi-macos) if this project helped you!

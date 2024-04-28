@@ -8,13 +8,15 @@
 ## Abstract
 
 Jacksum for macOS is an installation program with which you can easily access functions of [Jacksum](https://github.com/jonelo/jacksum) on macOS.
-In other words, it adds more than 450 hash algorithms to your Mac and you can use them with different user interfaces.
+In other words, it adds more than 480 hash algorithms to your Mac and you can use them with different user interfaces to calculate hash values, verify data integrity, and many moree. See the [Jacksum](https://github.com/jonelo/jacksum) page for more info.
 
 The installation program installs
 
 - [Jacksum](https://github.com/jonelo/jacksum) which is the hash engine, it also provides the command line interface (CLI)
 - [HashGarten](https://github.com/jonelo/HashGarten) which is a standalone graphical user interface (GUI) for Jacksum
 - script glue to call Jacksum and HashGarten from your preferred file manager
+
+See also the [Architeture](https://github.com/jonelo/jacksum/wiki/Architecture) of interaction between those components.
 
 
 ## System Requirements

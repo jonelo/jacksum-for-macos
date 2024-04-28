@@ -48,11 +48,11 @@ The following File Managers have been tested successfully to work with Jacksum a
 | [ForkLift 4](https://binarynights.com/)                                        | DnD + proprietary API | Commercial Software, [few manual actions required](https://github.com/jonelo/jacksum-fbi-macos/wiki/ForkLift-4) |
 | [Nimble Commander](https://magnumbytes.com)                                    | DnD                   | Free/Libre Open Source Software (GPLv3)                       |
 | [VioletGiraffe FileCommander](https://github.com/VioletGiraffe/file-commander) | DnD                   | Free/Libre Open Source Software (Apache 2.0)                  |
+| [Marta](https://marta.sh)                                                      | DnD                   | Freeware                                                      |
 | [EasyFind](https://www.devontechnologies.com/en/apps/freeware)                 | DnD                   | Freeware                                                      |
 | [Commander One](https://mac.eltima.com/file-manager.html)                      | DnD                   | Commercial Software                                           |
 | [CRAX Commander](https://crax.soft4u2.com)                                     | DnD                   | Commercial Software (Demo)                                    |
 | [Transmit](https://panic.com/transmit)                                         | DnD                   | Commercial Software (Trial)                                   |
-
 
 
 ## Installation

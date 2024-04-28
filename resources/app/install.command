@@ -281,8 +281,8 @@ function finish {
 cat << EOL
 
 Both Jacksum and HashGarten have been installed.
-They have also been integrated into the script
-menu for the following file managers:
+They have also been set up for the following
+file managers:
 
 EOL
 
@@ -296,15 +296,14 @@ EOL
 
 cat << EOL
 
-Open your file manager, select files and
-directories and choose an entry from the
+Please refer to the readme.pdf to see
+how you can use it with your file manager.
 EOL
 
-  printf "script folder called \"Jacksum %s\".\n" "$JACKSUM_VERSION"
   if [ $APPLE_SCRIPT_ERROR -eq 0 ]; then
     printf "\nDone.\n"
   else
-    printf "\nDown with errors. See above.\n"
+    printf "\nDone with errors. See above.\n"
   fi
 }
 

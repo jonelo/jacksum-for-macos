@@ -87,7 +87,23 @@ Open the Spotlight Search and search for HashGarten or go to Applications and op
 
 Go to Finder, select files and folders and choose an action from the Jacksum script folder.
 
-<img width="414" alt="Jacksum at the script menu" src="https://github.com/jonelo/jacksum-fbi-macos/assets/10409423/d8d94614-c927-4f5e-97b6-18d4f3bb3e3b">
+<img width="414" alt="Jacksum at the Finder script menu" src="https://github.com/jonelo/jacksum-fbi-macos/assets/10409423/d8d94614-c927-4f5e-97b6-18d4f3bb3e3b">
+
+From here [HashGarten](https://github.com/jonelo/HashGarten) takes over, and you can calculate checksums, CRCs and hash values of the selected files.
+
+### Using Path Finder and the Script Menu
+
+Open Path Finder, select files and folders and choose an action from the Jacksum script folder.
+
+<img width="449" alt="Jacksum at the Path Finder script menu" src="https://github.com/jonelo/jacksum-fbi-macos/assets/10409423/a1c9467c-30ed-450b-846b-cfa2c03a9291">
+
+From here [HashGarten](https://github.com/jonelo/HashGarten) takes over, and you can calculate checksums, CRCs and hash values of the selected files.
+
+### Using muCommander
+
+Open muCommandere, select files and folders, right click and choose an action from the "Open with..." menu.
+
+<img width="578" alt="muCommander menu" src="https://github.com/jonelo/jacksum-fbi-macos/assets/10409423/2822f49f-7f26-40ab-ae57-233972aa81b1">
 
 From here [HashGarten](https://github.com/jonelo/HashGarten) takes over, and you can calculate checksums, CRCs and hash values of the selected files.
 

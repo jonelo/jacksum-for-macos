@@ -12,11 +12,10 @@ In other words, it adds more than 450 hash algorithms to your Mac and you can us
 
 The installation program installs
 
-- a standalone **graphical user interface** (GUI) called [HashGarten](https://github.com/jonelo/HashGarten) which uses Jacksum as engine
+- [Jacksum](https://github.com/jonelo/jacksum) which is the hash engine, it also provides the **command line interface** (CLI)
+- [HashGarten](https://github.com/jonelo/HashGarten) which is a **graphical user interface** (GUI) for Jacksum
 - **file manager integration** of Jacksum and HashGarten for Finder, Path Finder, and muCommander
-- a script for direct access to the **command line interface** (CLI) of Jacksum in a Terminal
 
-For more information see also [https://jacksum.net](https://jacksum.net).
 
 ## System Requirements
 
@@ -86,7 +85,7 @@ Open the Spotlight Search and search for HashGarten or go to Applications and op
 
 Go to Finder, select files and folders and choose an action from the Jacksum script folder.
 
-<img height="353" alt="Jacksum at the Script Menu" src="docs/images/JacksumAtTheScriptMenu.png">
+<img width="414" alt="Jacksum at the script menu" src="https://github.com/jonelo/jacksum-fbi-macos/assets/10409423/d8d94614-c927-4f5e-97b6-18d4f3bb3e3b">
 
 From here [HashGarten](https://github.com/jonelo/HashGarten) takes over, and you can calculate checksums, CRCs and hash values of the selected files.
 
@@ -193,6 +192,12 @@ The script source can be revealed again by typing
 The source code of the generated and compiled applescripts can be relealed again by opening the .scpt files (located in the appropriate sccript folders) usiing the
 Apple Script Editor or osadecompile.
 
+
+## Further Information
+
+- [https://jacksum.net](https://jacksum.net)
+- https://github.com/jonelo/jacksum
+- https://github.com/jonelo/jacksum/wiki/Architecture
 
 ## Show your support
 

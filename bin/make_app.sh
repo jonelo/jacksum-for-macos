@@ -3,7 +3,7 @@
 # Copyright (c) 2021-2023 Johann N. Löfflmann, <https://johann.loefflmann.net>
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-CFG_DIR="${SCRIPT_DIR}/../resources"
+CFG_DIR="${SCRIPT_DIR}/../config"
 OUT_DIR="${SCRIPT_DIR}/../output"
 INT_DIR="${SCRIPT_DIR}/../resources/app/"
 

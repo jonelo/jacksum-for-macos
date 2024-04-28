@@ -3,7 +3,7 @@
 # (c) 2021-2024 Johann N. Löfflmann, <https://johann.loefflmann.net>
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-CFG_DIR="${SCRIPT_DIR}/../resources"
+CFG_DIR="${SCRIPT_DIR}/../config"
 RES_DIR="${SCRIPT_DIR}/../resources/dmg"
 OUT_DIR="${SCRIPT_DIR}/../output"
 WORK_DIR="/tmp/dmg-creation.$$"

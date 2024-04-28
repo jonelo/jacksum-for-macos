@@ -12,9 +12,9 @@ In other words, it adds more than 450 hash algorithms to your Mac and you can us
 
 The installation program installs
 
-- [Jacksum](https://github.com/jonelo/jacksum) which is the hash engine, it also provides the **command line interface** (CLI)
-- [HashGarten](https://github.com/jonelo/HashGarten) which is a **graphical user interface** (GUI) for Jacksum
-- **file manager integration** of Jacksum and HashGarten for Finder, Path Finder, and muCommander
+- [Jacksum](https://github.com/jonelo/jacksum) which is the hash engine, it also provides the command line interface (CLI)
+- [HashGarten](https://github.com/jonelo/HashGarten) which is a standalone graphical user interface (GUI) for Jacksum
+- script glue to call Jacksum and HashGarten from your preferred file manager
 
 
 ## System Requirements
@@ -43,7 +43,7 @@ The following File Managers have been tested successfully to work with Jacksum a
 | [Finder](https://support.apple.com/guide/mac-help/mchlp2605/mac)               | DnD + Script Menu     | Commercial Software, the standard file manager from Apple     |
 | [muCommander](https://www.mucommander.com)                                     | DnD + proprietary API | Free/Libre Open Source Software (GPLv3)                       |
 | [Path Finder](https://www.cocoatech.io)                                        | DnD + Script Menu     | Commercial Software                                           |
-| [ForkLift 4](https://binarynights.com/)                                        | DnD + proprietary API | Commercial Software, [few manual actions required](https://github.com/jonelo/jacksum-fbi-macos/wiki/ForkLift-4)   |
+| [ForkLift 4](https://binarynights.com/)                                        | DnD + proprietary API | Commercial Software, [few manual actions required](https://github.com/jonelo/jacksum-fbi-macos/wiki/ForkLift-4) |
 | [Nimble Commander](https://magnumbytes.com)                                    | DnD                   | Free/Libre Open Source Software (GPLv3)                       |
 | [VioletGiraffe FileCommander](https://github.com/VioletGiraffe/file-commander) | DnD                   | Free/Libre Open Source Software (Apache 2.0)                  |
 | [EasyFind](https://www.devontechnologies.com/en/apps/freeware)                 | DnD                   | Freeware                                                      |

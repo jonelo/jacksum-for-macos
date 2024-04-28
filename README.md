@@ -64,7 +64,8 @@ Download and open the [.dmg](https://github.com/jonelo/jacksum-fbi-macos/release
 
 Control-click on the app icon, and choose Open from the shortcut menu. Gatekeeper warns you about the app, but gives you the option to bypass its default policy and open the app.
 
-<img alt="Open the Jacksum Finder Integration app" src="docs/images/JacksumFinderIntegrationOpen.png">
+<img width="981" alt="Open the Jacksum for macOS app" src="https://github.com/jonelo/jacksum-fbi-macos/assets/10409423/846dc6b3-28ac-488d-a76d-a6e44eb68657">
+
 
 Alternatively, you can open a Terminal to bypass the graphical installation program and run the script directly that is bundled with the installer app. Example for Jacksum 3.7.0:
 

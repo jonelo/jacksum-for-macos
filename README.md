@@ -75,6 +75,13 @@ Alternatively, you can open a Terminal to bypass the graphical installation prog
 % ./Jacksum\ 3.7.0\ for\ macOS.app/Contents/Resources/script
 ```
 
+#### 3. Check results
+
+At the end of the task a summary will tell you what file managers have been found and where Jacksum and HashGarten have been integrated.
+
+<img width="550" alt="After the installation" src="https://github.com/jonelo/jacksum-fbi-macos/assets/10409423/21a49953-3fa3-41a6-bfb4-21bd1e8ef0ef">
+
+
 ## How to use it
 
 ### Using HashGarten

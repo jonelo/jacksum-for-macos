@@ -40,20 +40,21 @@ File managers that supports The **Apple Script Menu**-Interface are fully suppor
 
 The following File Managers have been tested successfully to work with Jacksum and HashGarten:
 
-| File Manager                                                                   | Supported Interfaces  | Comment                                                                                  |
+| File Manager                                                                   | Supported Interfaces  | Comment                                                       |
 |--------------------------------------------------------------------------------|-----------------------|---------------------------------------------------------------|
 | [Finder](https://support.apple.com/guide/mac-help/mchlp2605/mac)               | DnD + Script Menu     | Commercial Software, the standard file manager from Apple     |
+| [Fileside](https://www.fileside.app)                                           | DnD + proprietary API | Commercial Software (Trial), [few extra actions required](https://github.com/jonelo/jacksum-for-macos/wiki/Fileside)     |
+| [ForkLift 4](https://binarynights.com/)                                        | DnD + proprietary API | Commercial Software (Trial), [few extra actions required](https://github.com/jonelo/jacksum-for-macos/wiki/ForkLift-4) |
 | [muCommander](https://www.mucommander.com)                                     | DnD + proprietary API | Free/Libre Open Source Software (GPLv3)                       |
 | [Path Finder](https://www.cocoatech.io)                                        | DnD + Script Menu     | Commercial Software                                           |
-| [ForkLift 4](https://binarynights.com/)                                        | DnD + proprietary API | Commercial Software, [few manual actions required](https://github.com/jonelo/jacksum-for-macos/wiki/ForkLift-4) |
-| [Fileside](https://www.fileside.app)                                           | DnD + proprietary API | Commercial Software (Trial), [few manual actions required](https://github.com/jonelo/jacksum-for-macos/wiki/Fileside)     |
-| [Nimble Commander](https://magnumbytes.com)                                    | DnD                   | Free/Libre Open Source Software (GPLv3)                       |
-| [VioletGiraffe FileCommander](https://github.com/VioletGiraffe/file-commander) | DnD                   | Free/Libre Open Source Software (Apache 2.0)                  |
-| [Marta](https://marta.sh)                                                      | DnD                   | Freeware                                                      |
+|  | | |
 | [EasyFind](https://www.devontechnologies.com/en/apps/freeware)                 | DnD                   | Freeware                                                      |
-| [Commander One](https://mac.eltima.com/file-manager.html)                      | DnD                   | Commercial Software                                           |
 | [CRAX Commander](https://crax.soft4u2.com)                                     | DnD                   | Commercial Software (Demo)                                    |
+| [Commander One](https://mac.eltima.com/file-manager.html)                      | DnD                   | Commercial Software                                           |
+| [Marta](https://marta.sh)                                                      | DnD                   | Freeware                                                      |
+| [Nimble Commander](https://magnumbytes.com)                                    | DnD                   | Free/Libre Open Source Software (GPLv3)                       |
 | [Transmit](https://panic.com/transmit)                                         | DnD                   | Commercial Software (Trial)                                   |
+| [VioletGiraffe FileCommander](https://github.com/VioletGiraffe/file-commander) | DnD                   | Free/Libre Open Source Software (Apache 2.0)                  |
 
 
 ## Installation

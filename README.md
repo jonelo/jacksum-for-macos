@@ -33,7 +33,7 @@ See also the [Architeture](https://github.com/jonelo/jacksum/wiki/Architecture) 
 
 #### Supported File Managers
 
-File managers that supports The **Apple Script Menu**-Interface are fully supported by this integration program. In adddition to that a few proprietary interfaces are also supported.
+Finder which supports the **Apple Script Menu** is fully supported by this integration program. In adddition to that, some file managers providing proprietary interfaces are also supported.
 
 > [!TIP]
 > If your preferred file manager does not support the Apple Script Menu, nor allow to use any external scripts nor support any plug-ins, chances are high that your file manager supports at least **drag & drop**, so you could use drag & drop to transfer file/directory-paths from your file manager to the HashGarten GUI where you can process data further, e. g. calculate hashes from file/directory-paths.

@@ -1,8 +1,8 @@
-![GitHub downloads](https://img.shields.io/github/downloads/jonelo/jacksum-fbi-macos/total?color=green)
+![GitHub downloads](https://img.shields.io/github/downloads/jonelo/jacksum-for-macos/total?color=green)
 
 # Jacksum for macOS
 
-<img width="737" alt="Screenshot 2024-04-27 at 23 26 45" src="https://github.com/jonelo/jacksum-fbi-macos/assets/10409423/b0846070-b61f-4e74-b8bb-5dc3e6c0eaa1">
+<img width="737" alt="Screenshot 2024-04-27 at 23 26 45" src="https://github.com/jonelo/jacksum-for-macos/assets/10409423/b0846070-b61f-4e74-b8bb-5dc3e6c0eaa1">
 
 
 ## Abstract
@@ -45,7 +45,7 @@ The following File Managers have been tested successfully to work with Jacksum a
 | [Finder](https://support.apple.com/guide/mac-help/mchlp2605/mac)               | DnD + Script Menu     | Commercial Software, the standard file manager from Apple     |
 | [muCommander](https://www.mucommander.com)                                     | DnD + proprietary API | Free/Libre Open Source Software (GPLv3)                       |
 | [Path Finder](https://www.cocoatech.io)                                        | DnD + Script Menu     | Commercial Software                                           |
-| [ForkLift 4](https://binarynights.com/)                                        | DnD + proprietary API | Commercial Software, [few manual actions required](https://github.com/jonelo/jacksum-fbi-macos/wiki/ForkLift-4) |
+| [ForkLift 4](https://binarynights.com/)                                        | DnD + proprietary API | Commercial Software, [few manual actions required](https://github.com/jonelo/jacksum-for-macos/wiki/ForkLift-4) |
 | [Nimble Commander](https://magnumbytes.com)                                    | DnD                   | Free/Libre Open Source Software (GPLv3)                       |
 | [VioletGiraffe FileCommander](https://github.com/VioletGiraffe/file-commander) | DnD                   | Free/Libre Open Source Software (Apache 2.0)                  |
 | [Marta](https://marta.sh)                                                      | DnD                   | Freeware                                                      |
@@ -59,13 +59,13 @@ The following File Managers have been tested successfully to work with Jacksum a
 
 #### 1. Download and open the .dmg
 
-Download and open the [.dmg](https://github.com/jonelo/jacksum-fbi-macos/releases/latest).
+Download and open the [.dmg](https://github.com/jonelo/jacksum-for-macos/releases/latest).
 
 #### 2. Open on the .app
 
 Control-click on the app icon, and choose Open from the shortcut menu. Gatekeeper warns you about the app, but gives you the option to bypass its default policy and open the app.
 
-<img width="981" alt="Open the Jacksum for macOS app" src="https://github.com/jonelo/jacksum-fbi-macos/assets/10409423/846dc6b3-28ac-488d-a76d-a6e44eb68657">
+<img width="981" alt="Open the Jacksum for macOS app" src="https://github.com/jonelo/jacksum-for-macos/assets/10409423/846dc6b3-28ac-488d-a76d-a6e44eb68657">
 
 
 Alternatively, you can open a Terminal to bypass the graphical installation program and run the script directly that is bundled with the installer app. Example for Jacksum 3.7.0:
@@ -79,7 +79,7 @@ Alternatively, you can open a Terminal to bypass the graphical installation prog
 
 At the end of the task a summary will tell you what file managers have been found and where Jacksum and HashGarten have been integrated.
 
-<img width="550" alt="After the installation" src="https://github.com/jonelo/jacksum-fbi-macos/assets/10409423/21a49953-3fa3-41a6-bfb4-21bd1e8ef0ef">
+<img width="550" alt="After the installation" src="https://github.com/jonelo/jacksum-for-macos/assets/10409423/21a49953-3fa3-41a6-bfb4-21bd1e8ef0ef">
 
 
 ## How to use it
@@ -88,13 +88,13 @@ At the end of the task a summary will tell you what file managers have been foun
 
 Open the Spotlight Search and search for HashGarten or go to Applications and open HashGarten.
 
-<img width="558" alt="Spotlight Search" src="https://github.com/jonelo/jacksum-fbi-macos/assets/10409423/f57c53d2-8fad-41a3-8f65-229c838db8e3">
+<img width="558" alt="Spotlight Search" src="https://github.com/jonelo/jacksum-for-macos/assets/10409423/f57c53d2-8fad-41a3-8f65-229c838db8e3">
 
 ### Using Finder and the Script Menu
 
 Go to Finder, select files and folders and choose an action from the Jacksum script folder.
 
-<img width="414" alt="Jacksum at the Finder script menu" src="https://github.com/jonelo/jacksum-fbi-macos/assets/10409423/d8d94614-c927-4f5e-97b6-18d4f3bb3e3b">
+<img width="414" alt="Jacksum at the Finder script menu" src="https://github.com/jonelo/jacksum-for-macos/assets/10409423/d8d94614-c927-4f5e-97b6-18d4f3bb3e3b">
 
 From here [HashGarten](https://github.com/jonelo/HashGarten) takes over, and you can calculate checksums, CRCs and hash values of the selected files.
 
@@ -102,7 +102,7 @@ From here [HashGarten](https://github.com/jonelo/HashGarten) takes over, and you
 
 Open Path Finder, select files and folders and choose an action from the Jacksum script folder.
 
-<img width="449" alt="Jacksum at the Path Finder script menu" src="https://github.com/jonelo/jacksum-fbi-macos/assets/10409423/a1c9467c-30ed-450b-846b-cfa2c03a9291">
+<img width="449" alt="Jacksum at the Path Finder script menu" src="https://github.com/jonelo/jacksum-for-macos/assets/10409423/a1c9467c-30ed-450b-846b-cfa2c03a9291">
 
 From here [HashGarten](https://github.com/jonelo/HashGarten) takes over, and you can calculate checksums, CRCs and hash values of the selected files.
 
@@ -110,7 +110,7 @@ From here [HashGarten](https://github.com/jonelo/HashGarten) takes over, and you
 
 Open muCommandere, select files and folders, right click and choose an action from the "Open with..." menu.
 
-<img width="578" alt="muCommander menu" src="https://github.com/jonelo/jacksum-fbi-macos/assets/10409423/2822f49f-7f26-40ab-ae57-233972aa81b1">
+<img width="578" alt="muCommander menu" src="https://github.com/jonelo/jacksum-for-macos/assets/10409423/2822f49f-7f26-40ab-ae57-233972aa81b1">
 
 From here [HashGarten](https://github.com/jonelo/HashGarten) takes over, and you can calculate checksums, CRCs and hash values of the selected files.
 
@@ -180,8 +180,8 @@ Go to https://sveinbjorn.org/platypus, download and open Platypus, select "Setti
 
 Clone or download the sources from the GitHub project:
 ```
-% git clone https://github.com/jonelo/jacksum-fbi-macos.git
-% cd jacksum-fbi-macos/
+% git clone https://github.com/jonelo/jacksum-for-macos.git
+% cd jacksum-for-macos/
 ```
 
 Note: if you haven't installed git yet, Apple's Install Command Line Developer Tools will install it for you.
@@ -226,4 +226,4 @@ Apple Script Editor or osadecompile.
 
 ## Show your support
 
-Please ⭐️ [this repository](https://github.com/jonelo/jacksum-fbi-macos) if this project helped you!
+Please ⭐️ [this repository](https://github.com/jonelo/jacksum-for-macos) if this project helped you!

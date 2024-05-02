@@ -57,6 +57,14 @@ The following File Managers have been tested successfully to work with Jacksum a
 | [VioletGiraffe FileCommander](https://github.com/VioletGiraffe/file-commander) | DnD                   | Free/Libre Open Source Software (Apache 2.0)                  |
 
 
+#### Not Yet Supported File Managers
+
+The following file managers do not support DnD nor calling external scripts.
+| File Manager                                                                   | Comment                                                       |
+|--------------------------------------------------------------------------------|---------------------------------------------------------------|
+| [Spacedrive Alpha v0.2](https://www.spacedrive.com)                            | Free/Libre Open Source Software (AGPL 3.0)                    |
+
+
 ## Installation
 
 #### 1. Download and open the .dmg

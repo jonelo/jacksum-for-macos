@@ -29,7 +29,7 @@ See also the [Architeture](https://github.com/jonelo/jacksum/wiki/Architecture) 
 ### Software
 
 - macOS 10.11 (El Capitan) or later, tested up to macOS 14.4.1 (Sonoma)
-- A supported file manager (see below)
+- optional: a supported file manager (see below) to call Jacksum and HashGarten from your flie manager
 
 #### Supported File Managers
 
@@ -59,7 +59,8 @@ The following File Managers have been tested successfully to work with Jacksum a
 
 #### Not Yet Supported File Managers
 
-The following file managers do not support DnD nor calling external scripts.
+The following file managers do not support DnD nor allow calling external scripts.
+
 | File Manager                                                                   | Comment                                                       |
 |--------------------------------------------------------------------------------|---------------------------------------------------------------|
 | [Spacedrive Alpha v0.2](https://www.spacedrive.com)                            | Free/Libre Open Source Software (AGPL 3.0)                    |

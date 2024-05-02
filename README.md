@@ -51,6 +51,7 @@ The following File Managers have been tested successfully to work with Jacksum a
 | [EasyFind](https://www.devontechnologies.com/en/apps/freeware)                 | DnD                   | Freeware                                                      |
 | [CRAX Commander](https://crax.soft4u2.com)                                     | DnD                   | Commercial Software (Demo)                                    |
 | [Commander One](https://mac.eltima.com/file-manager.html)                      | DnD                   | Commercial Software                                           |
+| [HiFile](https://www.hifile.app/)                                              | DnD                   | Commercial Software (Trial)
 | [Marta](https://marta.sh)                                                      | DnD                   | Freeware                                                      |
 | [Nimble Commander](https://magnumbytes.com)                                    | DnD                   | Free/Libre Open Source Software (GPLv3)                       |
 | [Transmit](https://panic.com/transmit)                                         | DnD                   | Commercial Software (Trial)                                   |

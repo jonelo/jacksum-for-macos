@@ -44,7 +44,7 @@ The following File Managers have been tested successfully to work with Jacksum a
 |--------------------------------------------------------------------------------|-----------------------|---------------------------------------------------------------|
 | [CRAX Commander](https://crax.soft4u2.com)                                     | DnD                   | Commercial Software (Demo)                                    |
 | [Commander One](https://mac.eltima.com/file-manager.html)                      | DnD                   | Commercial Software                                           |
-| [Dropover](https://dropoverapp.com/))                                          | DnD                   | Commercial Software                                           |
+| [Dropover](https://dropoverapp.com/)                                           | DnD                   | Commercial Software                                           |
 | [EasyFind](https://www.devontechnologies.com/en/apps/freeware)                 | DnD                   | Freeware                                                      |
 | [Finder](https://support.apple.com/guide/mac-help/mchlp2605/mac)               | DnD + Script Menu     | Commercial Software, the standard file manager from Apple     |
 | [Fileside](https://www.fileside.app)                                           | DnD + proprietary API | Commercial Software (Trial), [few extra actions required](https://github.com/jonelo/jacksum-for-macos/wiki/Fileside)     |

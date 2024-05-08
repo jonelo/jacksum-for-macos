@@ -33,7 +33,7 @@ See also the [Architeture](https://github.com/jonelo/jacksum/wiki/Architecture) 
 
 #### Supported File Managers
 
-Finder which supports the **Apple Script Menu** is fully supported by this integration program. In adddition to that, some file managers providing proprietary interfaces are also supported.
+**Finder** which supports the Apple Script Menu is fully supported by this integration program. In adddition to that, some file managers providing proprietary interfaces are also supported.
 
 > [!TIP]
 > If your preferred file manager does not support the Apple Script Menu, nor allow to use any external scripts nor support any plug-ins, chances are high that your file manager supports at least **drag & drop**, so you could use drag & drop to transfer file/directory-paths from your file manager to the HashGarten GUI where you can process data further, e. g. calculate hashes from file/directory-paths.
@@ -42,23 +42,23 @@ The following File Managers have been tested successfully to work with Jacksum a
 
 | File Manager                                                                   | Supported Interfaces  | Comment                                                       |
 |--------------------------------------------------------------------------------|-----------------------|---------------------------------------------------------------|
+| [CRAX Commander](https://crax.soft4u2.com)                                     | DnD                   | Commercial Software (Demo)                                    |
+| [Commander One](https://mac.eltima.com/file-manager.html)                      | DnD                   | Commercial Software                                           |
+| [Dropover](https://dropoverapp.com/))                                          | DnD                   | Commercial Software                                           |
+| [EasyFind](https://www.devontechnologies.com/en/apps/freeware)                 | DnD                   | Freeware                                                      |
 | [Finder](https://support.apple.com/guide/mac-help/mchlp2605/mac)               | DnD + Script Menu     | Commercial Software, the standard file manager from Apple     |
 | [Fileside](https://www.fileside.app)                                           | DnD + proprietary API | Commercial Software (Trial), [few extra actions required](https://github.com/jonelo/jacksum-for-macos/wiki/Fileside)     |
 | [Forklift 4](https://binarynights.com/)                                        | DnD + proprietary API | Commercial Software (Trial), [few extra actions required](https://github.com/jonelo/jacksum-for-macos/wiki/ForkLift-4) |
-| [muCommander](https://www.mucommander.com)                                     | DnD + proprietary API | Free/Libre Open Source Software (GPLv3)                       |
-| [Path Finder](https://www.cocoatech.io)                                        | DnD + Script Menu     | Commercial Software                                           |
-|  | | |
-| [EasyFind](https://www.devontechnologies.com/en/apps/freeware)                 | DnD                   | Freeware                                                      |
-| [CRAX Commander](https://crax.soft4u2.com)                                     | DnD                   | Commercial Software (Demo)                                    |
-| [Commander One](https://mac.eltima.com/file-manager.html)                      | DnD                   | Commercial Software                                           |
-| [HiFile](https://www.hifile.app/)                                              | DnD                   | Commercial Software (Trial)
+| [HiFile](https://www.hifile.app/)                                              | DnD                   | Commercial Software (Trial)                                   |
 | [Marta](https://marta.sh)                                                      | DnD                   | Freeware                                                      |
+| [muCommander](https://www.mucommander.com)                                     | DnD + proprietary API | Free/Libre Open Source Software (GPLv3)                       |
 | [Nimble Commander](https://magnumbytes.com)                                    | DnD                   | Free/Libre Open Source Software (GPLv3)                       |
+| [Path Finder](https://www.cocoatech.io)                                        | DnD + Script Menu     | Commercial Software                                           |
 | [Transmit](https://panic.com/transmit)                                         | DnD                   | Commercial Software (Trial)                                   |
 | [VioletGiraffe FileCommander](https://github.com/VioletGiraffe/file-commander) | DnD                   | Free/Libre Open Source Software (Apache 2.0)                  |
 
 
-#### Not Yet Supported File Managers
+#### Not Yet Supported FLOSS File Managers
 
 The following file managers do not support DnD nor allow calling external scripts.
 

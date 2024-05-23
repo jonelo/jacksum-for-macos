@@ -59,6 +59,15 @@ end tell
 
 
 #---------------------------------------------------------------
+function update_progress_bar {
+#---------------------------------------------------------------
+  FINISHED=$[$FINISHED+$1]
+  PERCENT=$[$FINISHED*100/$TOTAL_COUNT]
+  printf "PROGRESS:%i\n" $PERCENT
+}
+
+
+#---------------------------------------------------------------
 function setup_muCommander {
 #---------------------------------------------------------------
 DIR="$APP_DIR/Contents/MacOS/bin"
@@ -83,9 +92,61 @@ echo -n '<?xml version="1.0" encoding="UTF-8"?>
     ln -s "${APP_DIR}/mucommander.commands.xml" "$COMMANDS_XML"
   fi
 
-  FINISHED=$[$FINISHED+4]
-  PERCENT=$[$FINISHED*100/$TOTAL_COUNT]
-  printf "PROGRESS:%i\n" $PERCENT
+  update_progress_bar 4
+}
+
+
+#---------------------------------------------------------------
+function setup_marta {
+#---------------------------------------------------------------
+
+CMDS=("calc" "check" "cust" "edit")
+ACTIONS=("Calc Hash Values" "Check Data Integrity" "Customized Output" "Edit Script")
+PLUGINS_DIR="$HOME/Library/Application Support/org.yanex.marta/Plugins/"
+mkdir -p "$PLUGINS_DIR"
+
+index=0
+for action in "${ACTIONS[@]}"
+do
+    action_nospaces=${action// /}
+    plugin_file="$PLUGINS_DIR/${action_nospaces}.lua"
+
+echo -n 'plugin {
+    id = "net.jacksum.Jacksum'"${action_nospaces}"'Plugin",
+    name = "Jacksum '"${action}"'",
+    apiVersion = "2.1",
+
+    author = "Johann N. Löfflmann",
+    email = "johann@loefflmannn.net",
+    url = "https://jacksum.net/"
+}
+
+action {
+    id = "net.jacksum.Jacksum'"${action_nospaces}"'Action",
+    name = "'"${action}"' [Jacksum]",
+
+    isApplicable = function(context)
+        return context.activePane.model.hasActiveFiles
+    end,
+
+    apply = function(context)
+        local files = context.activePane.model.activeFiles
+        local array = {}
+        for i, file in ipairs(files) do
+           array[i] = file.path
+        end
+        table.insert(array, 1, "cmd_'"${CMDS[index]}"'")
+        martax.execute("/Applications/HashGarten.app/Contents/MacOS/bin/jacksum.sh", array)
+    end
+}
+' > "${plugin_file}"
+
+  chmod +x "${plugin_file}"
+  index=$[$index+1]
+
+done
+
+  update_progress_bar 4
 }
 
 
@@ -149,6 +210,14 @@ function enableOrDisableFileManagers {
     TOTAL_COUNT=$[$TOTAL_COUNT+$COMMANDS_COUNT]
   else
     MUCOMMANDER=0
+  fi
+
+  # Marta
+  if [ -d "/Applications/Marta.app" ]; then
+    MARTA=1
+    TOTAL_COUNT=$[$TOTAL_COUNT+$COMMANDS_COUNT]
+  else
+    MARTA=0
   fi
 } 
 
@@ -266,9 +335,7 @@ function setup {
     # Clean up
     rm "${APPLE_SCRIPT}"
 
-    FINISHED=$[$FINISHED+1]
-    PERCENT=$[$FINISHED*100/$TOTAL_COUNT]
-    printf "PROGRESS:%i\n" $PERCENT
+    update_progress_bar 1
 
   done
 }
@@ -287,11 +354,14 @@ file managers:
 EOL
 
   printf "  - Finder\n"
-  if [ $PATH_FINDER = 1 ]; then
+  if [ $PATH_FINDER -eq 1 ]; then
     printf "  - Path Finder\n"
   fi
-  if [ $MUCOMMANDER = 1 ]; then
+  if [ $MUCOMMANDER -eq 1 ]; then
     printf "  - muCommander\n"
+  fi
+  if [ $MARTA -eq 1 ]; then
+    printf "  - Marta\n"
   fi
 
 cat << EOL
@@ -319,6 +389,10 @@ function setupAllFileManagers {
 
   if [ $MUCOMMANDER -eq 1 ]; then
       setup_muCommander
+  fi
+
+  if [ $MARTA -eq 1 ]; then
+      setup_marta
   fi
 }
 

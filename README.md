@@ -2,8 +2,7 @@
 
 # Jacksum for macOS
 
-<img width="737" alt="Screenshot 2024-04-27 at 23 26 45" src="https://github.com/jonelo/jacksum-for-macos/assets/10409423/b0846070-b61f-4e74-b8bb-5dc3e6c0eaa1">
-
+![Jacksum for macOS app](https://github.com/jonelo/jacksum-for-macos/assets/10409423/d1ed6f5d-59eb-4329-a8c6-1b884df90ff6)
 
 ## Abstract
 
@@ -50,7 +49,7 @@ The following File Managers have been tested successfully to work with Jacksum a
 | [Fileside](https://www.fileside.app)                                           | DnD + proprietary API | Commercial Software (Trial), [few extra actions required](https://github.com/jonelo/jacksum-for-macos/wiki/Fileside)     |
 | [Forklift 4](https://binarynights.com/)                                        | DnD + proprietary API | Commercial Software (Trial), [few extra actions required](https://github.com/jonelo/jacksum-for-macos/wiki/ForkLift-4) |
 | [HiFile](https://www.hifile.app/)                                              | DnD                   | Commercial Software (Trial)                                   |
-| [Marta](https://marta.sh)                                                      | DnD                   | Freeware                                                      |
+| [Marta](https://marta.sh)                                                      | DnD + proprietary API | Freeware                                                      |
 | [muCommander](https://www.mucommander.com)                                     | DnD + proprietary API | Free/Libre Open Source Software (GPLv3)                       |
 | [Nimble Commander](https://magnumbytes.com)                                    | DnD                   | Free/Libre Open Source Software (GPLv3)                       |
 | [Path Finder](https://www.cocoatech.io)                                        | DnD + Script Menu     | Commercial Software                                           |
@@ -125,6 +124,16 @@ Open muCommandere, select files and folders, right click and choose an action fr
 <img width="578" alt="muCommander menu" src="https://github.com/jonelo/jacksum-for-macos/assets/10409423/2822f49f-7f26-40ab-ae57-233972aa81b1">
 
 From here [HashGarten](https://github.com/jonelo/HashGarten) takes over, and you can calculate checksums, CRCs and hash values of the selected files.
+
+
+### Using Marta
+
+Open Marta, select files and folders, select Tools -> Actions... -> Enter "Jacksum" in Search Action and choose one of the entries.
+
+![Bildschirmfoto 2024-05-23 um 21 36 38](https://github.com/jonelo/jacksum-for-macos/assets/10409423/6efbe728-a5d5-4037-8120-cc791d7fae8a)
+
+From here [HashGarten](https://github.com/jonelo/HashGarten) takes over, and you can calculate checksums, CRCs and hash values of the selected files.
+
 
 ### Using the Command Line Interface (CLI)
 

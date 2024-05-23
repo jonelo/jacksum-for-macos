@@ -36,7 +36,7 @@ function checkPrerequisites() {
     fi
     while (( "$#" )); do
         if ! type -P "$1" >/dev/null; then
-            printf >&2 "FATAL: %s seems to be not installed, please install it or put it to your PATH. Exit.\n" "$1"
+            printf >&2 "FATAL: %s seems not to be installed, please install it or put it to your PATH. Exit.\n" "$1"
             exit 1
         fi
         shift

@@ -12,7 +12,10 @@ source ${CFG_DIR}/make_all.cfg
 source ${CFG_DIR}/make_app.cfg
 mkdir -p "${OUT_DIR}"
 
-# make the integration script app
+# make the integration script app using Platypus
+# Note: Platypus includes a command line tool counterpart to the Platypus.app
+# application, platypus, which can be installed into /usr/local/bin/ via
+# Settings... Install
 checkPrerequisites /usr/local/bin/platypus
 
 /usr/local/bin/platypus \
@@ -31,6 +34,8 @@ checkPrerequisites /usr/local/bin/platypus
   "${INT_DIR}/install.command" \
   "${OUT_DIR}/${APP_NAME}"
 
-# reset any answers from previously dialogs
-tccutil reset AppleEvents
+if [ $? = 0 ]; then
+  # reset any answers from previously dialogs
+  tccutil reset AppleEvents
+fi
 

@@ -26,8 +26,8 @@ checkPrerequisites /usr/local/bin/platypus
 --bundle-identifier "${APP_BUNDLE_ID}" \
 --bundled-file "${INT_DIR}/${APP_LICENSE_FILE}" \
 --bundled-file "${INT_DIR}/HashGarten.app" \
---bundled-file "${INT_DIR}/Java/"*x64*.tar.gz \
---bundled-file "${INT_DIR}/Java/"*aarch64*.tar.gz \
+--bundled-file "${INT_DIR}/"*x64*.tar.gz \
+--bundled-file "${INT_DIR}/"*aarch64*.tar.gz \
   "${INT_DIR}/install.command" \
   "${OUT_DIR}/${APP_NAME}"
 

@@ -175,18 +175,23 @@ Open a Terminal and type
 % rm -rf ~/Library/Scripts/Applications/Finder/Jacksum*
 ```
 
-If Path Finder was found during installation type
+If Path Finder was found during installation, type
 ```
 % rm -rf ~/Library/Scripts/Applications/Path\ Finder/Jacksum*
 ```
 
-If muCommander was found during installation type
+If muCommander was found during installation, type
 ```
 % rm ~/Library/Preferences/muCommander/commands.xml
 % cp ~/Library/Preferences/muCommander/commands.xml.before_jacksum.* ~/Library/Preferences/muCommander/commands.xml
 % rm ~/Library/Preferences/muCommander/commands.xml.before_jacksum.*
 ```
 
+If Marta was found during installation, type
+```
+% cd ~/Library/Application\ Support/org.yanex.marta/Plugins/
+% rm $(grep -il jacksum *.lua | xargs)
+```
 
 ## Developers Notes
 

@@ -7,7 +7,7 @@
 ## Abstract
 
 Jacksum for macOS is an installation program with which you can easily access functions of [Jacksum](https://github.com/jonelo/jacksum) on macOS.
-In other words, it adds more than 480 hash algorithms to your Mac and you can use them with different user interfaces to calculate hash values, verify data integrity, and many moree. See the [Jacksum](https://github.com/jonelo/jacksum) page for more info.
+In other words, it adds more than 480 hash algorithms to your Mac and you can use them with different user interfaces to calculate hash values, verify data integrity, and many more. See the [Jacksum](https://github.com/jonelo/jacksum) page for more info.
 
 The installation program installs
 

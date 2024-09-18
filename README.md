@@ -27,7 +27,7 @@ See also the [Architeture](https://github.com/jonelo/jacksum/wiki/Architecture) 
 
 ### Software
 
-- macOS 10.11 (El Capitan) or later, tested up to macOS 14.4.1 (Sonoma)
+- macOS 10.11 (El Capitan) or later, tested up to macOS 15.0 (Sequoia)
 - optional: a supported file manager (see below) to call Jacksum and HashGarten from your flie manager
 
 #### Supported File Managers

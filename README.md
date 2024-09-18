@@ -82,9 +82,9 @@ Control-click on the app icon, and choose Open from the shortcut menu. Gatekeepe
 > [!TIP]
 > **For users of macOS Sequoia 15.0 and later**
 > 
-> With the release of macOS Sequoia any app from an unidentified developer gives an error that the app ist not opened. To open any of such apps, open "System Settings", and go to the "Privacy & Securtiy" tab. On the "Privacy & Security" page scroll down to last. Under the Security section you have an option to open the app that was blocked. Click on the "Open Anyway" button to open it, and proceed with the prompts. Your app will be opened.
+> With the release of macOS Sequoia, any app from an unidentified developer gives an error that the app is not opened. To open any of such apps, open "System Settings", and go to the "Privacy & Security" tab. On the "Privacy & Security" page, scroll down to last. Under the Security section, you have the option to open the application that was previously blocked. Click on the "Open Anyway" button to open it, and proceed with the prompts. Your app will be opened.
 >
-> To allow open apps on macOS from anywhere, open a Terminal and enter `sudo spctl --master-disable`. Under the "Allow applications from" in the Security section you will find a new menu item called "Anywhere".
+> To allow open apps on macOS from anywhere, open a Terminal and enter `sudo spctl --master-disable`. In the Security section, under "Allow applications from", there is a new menu item called "Anywhere."
 
 Alternatively, you can open a Terminal to bypass the graphical installation program and run the script directly that is bundled with the installer app. Example for Jacksum 3.7.0:
 

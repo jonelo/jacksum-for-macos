@@ -63,7 +63,7 @@ The following file managers do not support DnD nor allow calling external script
 
 | File Manager                                                                   | Comment                                                       |
 |--------------------------------------------------------------------------------|---------------------------------------------------------------|
-| [Spacedrive Alpha v0.2](https://www.spacedrive.com)                            | Free/Libre Open Source Software (AGPL 3.0)                    |
+| [Spacedrive Alpha v0.4.2](https://www.spacedrive.com)                          | Free/Libre Open Source Software (AGPL 3.0)                    |
 
 
 ## Installation

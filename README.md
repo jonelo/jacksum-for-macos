@@ -200,55 +200,6 @@ If Marta was found during installation, type
 % rm $(grep -il jacksum *.lua | xargs)
 ```
 
-## Developers Notes
-
-### How to create the .app and .dmg
-
-#### 1. Download and install the Platypus command line tool
-
-The .app will be created by the Platypus command line tool. Platypus is a great tool create Mac apps from command line scripts.
-Go to https://sveinbjorn.org/platypus, download and open Platypus, select "Settings..." from the Platypus menu and install the command line tool.
-
-#### 2. Clone the sources
-
-Clone or download the sources from the GitHub project:
-```
-% git clone https://github.com/jonelo/jacksum-for-macos.git
-% cd jacksum-for-macos/
-```
-
-Note: if you haven't installed git yet, Apple's Install Command Line Developer Tools will install it for you.
-
-#### 3. Build both the .app and the .dmg
-
-Open a Terminal and run
-```
-% ./bin/make_all.sh
-```
-That will build the .app and wrap it in a .dmg. You find both the .app and the .dmg in the folder called `./output/`.
-
-#### 4. Open the .dmg and test the .app
-
-```
-% open ./output/*.dmg
-```
-
-### Interna of the installation app
-
-The core of the Jacksum for macOS.app is a bash script that installs both HashGarten and Jacksum to the Finder's Script Menu (and other file managers it can detect) by creating applescript scripts (in case of Finder and Path Finder), and compiling those on the system during the installation using osacompile.
-
-The installation script requires Mac OS X 10.4 (Tiger) or later to run. The script does not require admin privileges.
-Credits: the installer app has been created by [Platypus](https://sveinbjorn.org/platypus), a great app to wrap shell scripts into a macOS app.
-
-Once the script has been compiled by Platypus, the installer app requires macOS 10.11 (El Capitan) or later.
-The script source can be revealed again by typing
-```
-% cd /Volumes/Jacksum\ for\ macOS/
-% cat ./Jacksum\ 3.7.0\ for\ macOS.app/Contents/Resources/script
-```
-
-The source code of the generated and compiled applescripts can be relealed again by opening the .scpt files (located in the appropriate sccript folders) usiing the Apple Script Editor or osadecompile.
-
 
 ## Further Information
 

@@ -27,7 +27,7 @@ See also the [Architeture](https://github.com/jonelo/jacksum/wiki/Architecture) 
 
 ### Software
 
-- macOS 10.11 (El Capitan) or later, tested up to macOS 15.0 (Sequoia)
+- macOS 10.11 (El Capitan) or later, tested up to macOS 15.0.1 (Sequoia)
 - optional: a supported file manager (see below) to call Jacksum and HashGarten from your flie manager
 
 #### Supported File Managers
@@ -240,15 +240,14 @@ The core of the Jacksum for macOS.app is a bash script that installs both HashGa
 The installation script requires Mac OS X 10.4 (Tiger) or later to run. The script does not require admin privileges.
 Credits: the installer app has been created by [Platypus](https://sveinbjorn.org/platypus), a great app to wrap shell scripts into a macOS app.
 
-Once the script has been compiled by Platypus, the installer app requires macOS 10.11 or later.
+Once the script has been compiled by Platypus, the installer app requires macOS 10.11 (El Capitan) or later.
 The script source can be revealed again by typing
 ```
 % cd /Volumes/Jacksum\ for\ macOS/
 % cat ./Jacksum\ 3.7.0\ for\ macOS.app/Contents/Resources/script
 ```
 
-The source code of the generated and compiled applescripts can be relealed again by opening the .scpt files (located in the appropriate sccript folders) usiing the
-Apple Script Editor or osadecompile.
+The source code of the generated and compiled applescripts can be relealed again by opening the .scpt files (located in the appropriate sccript folders) usiing the Apple Script Editor or osadecompile.
 
 
 ## Further Information

@@ -1,5 +1,8 @@
 Release Notes
 -------------
+2.4.0, Oct 27, 2024
+- bundled Jacksum 3.7.0, HashGarten 0.18.0, and OpenJDK Runtime 21.0.5 from adoptium.net
+
 2.3.0, May 23, 2024
 - added support for Marta (marta.sh)
 

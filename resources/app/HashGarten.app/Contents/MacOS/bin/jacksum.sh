@@ -15,7 +15,7 @@ ERROR_LOG="/tmp/jacksum-error.txt"
 JAVA="/Applications/HashGarten.app/Contents/Java/jre_latest/Contents/Home/bin/java"
 LAUNCHER="/Applications/HashGarten.app/Contents/MacOS/bin/launcher"
 JACKSUM_JAR="/Applications/HashGarten.app/Contents/MacOS/lib/jacksum-3.7.0.jar"
-HASHGARTEN_JAR="/Applications/HashGarten.app/Contents/MacOS/lib/HashGarten-0.17.0.jar"
+HASHGARTEN_JAR="/Applications/HashGarten.app/Contents/MacOS/lib/HashGarten-0.18.0.jar"
 SCRIPT="/Applications/HashGarten.app/Contents/MacOS/bin/jacksum.sh"
 
 cat /dev/null > "$FILE_LIST"

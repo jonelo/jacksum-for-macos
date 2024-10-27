@@ -2,7 +2,7 @@
 
 # app specific variables
 APP_NAME="HashGarten"
-MAIN_JAR="HashGarten-0.17.0.jar"
+MAIN_JAR="HashGarten-0.18.0.jar"
 
 # this script is stored in what folder?
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"

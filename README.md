@@ -2,7 +2,7 @@
 
 # Jacksum for macOS
 
-![Jacksum for macOS app](https://github.com/jonelo/jacksum-for-macos/assets/10409423/d1ed6f5d-59eb-4329-a8c6-1b884df90ff6)
+![Jacksum for macOS app](https://github.com/user-attachments/assets/82426e6a-966f-4993-a8e6-0d0c6c230933)
 
 ## Abstract
 

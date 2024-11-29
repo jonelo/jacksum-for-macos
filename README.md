@@ -172,20 +172,26 @@ Modify the content of `~/Library/Preferences/muCommander/commands.xml` to match 
 
 ### How to recreate all items again
 
-Just run the Jacksum for macOS.app again.
+Just run the `Jacksum for macOS.app` again.
 
 ## How to uninstall it
 
-Open a Terminal and type
+### Finder
+
+Since Finder will always be found during installation, type
 ```
 % rm -rf /Applications/HashGarten.app
 % rm -rf ~/Library/Scripts/Applications/Finder/Jacksum*
 ```
 
+### Path Finder
+
 If Path Finder was found during installation, type
 ```
 % rm -rf ~/Library/Scripts/Applications/Path\ Finder/Jacksum*
 ```
+
+### muCommander
 
 If muCommander was found during installation, type
 ```
@@ -193,6 +199,8 @@ If muCommander was found during installation, type
 % cp ~/Library/Preferences/muCommander/commands.xml.before_jacksum.* ~/Library/Preferences/muCommander/commands.xml
 % rm ~/Library/Preferences/muCommander/commands.xml.before_jacksum.*
 ```
+
+### Marta
 
 If Marta was found during installation, type
 ```

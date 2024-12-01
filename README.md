@@ -31,16 +31,14 @@ Open the [.dmg](https://github.com/jonelo/jacksum-for-macos/releases/latest).
 
 #### For users of macOS Sequoia 15 and later
 
-With the release of macOS Sequoia, any app from an **unidentified developer** gives an error that the app is not opened.
+With the release of macOS Sequoia, any app from an unidentified developer gives an error that the app is not opened.
 
-![image](https://github.com/user-attachments/assets/e7a293d7-35c2-4b86-927f-4e210c70f88e)
-
-To open any of such apps, open "System Settings", and go to the "Privacy & Security" tab. On the "Privacy & Security" page, scroll down to last. Under the Security section, you have the option to open the application that was previously blocked. Click on the "Open Anyway" button to open it, and proceed with the prompts. Your app will be opened.
-
-To allow open apps on macOS from anywhere, open a Terminal and enter `sudo spctl --master-disable`. In the Security section, under "Allow applications from", there is a new menu item called "Anywhere.". This will set the behavior as it was in Sonoma and earlier releases of macOS.
-
-> [!NOTE]
-> I am an unidentified developer, because I do not pay Apple for a certificate to sign my free app. To verify the integrity of the app you can compare the hash values that are listed with the release notes for each release. To calculate hash values you can use hash tools such as [Jacksum for macOS](https://github.com/jonelo/jacksum-for-macos).
+> [!TIP]
+> To open any of such apps, open "System Settings", and go to the "Privacy & Security" tab. On the "Privacy & Security" page, scroll down to last. Under the Security section, you have the option to open the application that was previously blocked. Click on the "Open Anyway" button to open it, and proceed with the prompts. Your app will be opened.
+>
+> To allow open apps on macOS from anywhere, open a Terminal and enter `sudo spctl --master-disable`. In the Security section, under "Allow applications from", there is a new menu item called "Anywhere.". This will set the behavior as it was in Sonoma and earlier releases of macOS.
+>
+> To verify the integrity of the app you can compare the hash values that are listed with the release notes for each release. To calculate hash values you can use hash tools such as [Jacksum for macOS](https://github.com/jonelo/jacksum-for-macos).
 
 #### For users of macOS Sonoma 14 and earlier
 
@@ -49,14 +47,15 @@ Control-click on the app icon, and choose Open from the shortcut menu. Gatekeepe
 <img width="981" alt="Open the Jacksum for macOS app" src="https://github.com/jonelo/jacksum-for-macos/assets/10409423/846dc6b3-28ac-488d-a76d-a6e44eb68657">
 <p><br/></p>
 
-#### For the command line interface lover
+#### For users of the command line interface
 
-You can open a Terminal to bypass both the graphical installation program and security warnings and run the script directly that is bundled with the installer app. Example for Jacksum 3.7.0:
-
-```
-% cd /Volumes/Jacksum\ for\ macOS
-% ./Jacksum\ 3.7.0\ for\ macOS.app/Contents/Resources/script
-```
+> [!TIP]
+> You can open a Terminal to bypass both the graphical installation program and security warnings and run the script directly that is bundled with the installer app. Example for Jacksum 3.7.0:
+>
+>```
+>% cd /Volumes/Jacksum\ for\ macOS
+>% ./Jacksum\ 3.7.0\ for\ macOS.app/Contents/Resources/script
+>```
 
 ### 3. Check results
 

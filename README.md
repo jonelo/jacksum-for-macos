@@ -31,9 +31,16 @@ Open the [.dmg](https://github.com/jonelo/jacksum-for-macos/releases/latest).
 
 #### For users of macOS Sequoia 15 and later
 
-With the release of macOS Sequoia, any app from an unidentified developer gives an error that the app is not opened. To open any of such apps, open "System Settings", and go to the "Privacy & Security" tab. On the "Privacy & Security" page, scroll down to last. Under the Security section, you have the option to open the application that was previously blocked. Click on the "Open Anyway" button to open it, and proceed with the prompts. Your app will be opened.
+With the release of macOS Sequoia, any app from an **unidentified developer** gives an error that the app is not opened.
 
-To allow open apps on macOS from anywhere, open a Terminal and enter `sudo spctl --master-disable`. In the Security section, under "Allow applications from", there is a new menu item called "Anywhere."
+![image](https://github.com/user-attachments/assets/e7a293d7-35c2-4b86-927f-4e210c70f88e)
+
+To open any of such apps, open "System Settings", and go to the "Privacy & Security" tab. On the "Privacy & Security" page, scroll down to last. Under the Security section, you have the option to open the application that was previously blocked. Click on the "Open Anyway" button to open it, and proceed with the prompts. Your app will be opened.
+
+To allow open apps on macOS from anywhere, open a Terminal and enter `sudo spctl --master-disable`. In the Security section, under "Allow applications from", there is a new menu item called "Anywhere.". This will set the behavior as it was in Sonoma and earlier releases of macOS.
+
+> [!NOTE]
+> I am an unidentified developer, because I do not pay Apple for a certificate to sign my free app. To verify the integrity of the app you can compare the hash values that are listed with the release notes for each release. To calculate hash values you can use hash tools such as [Jacksum for macOS](https://github.com/jonelo/jacksum-for-macos).
 
 #### For users of macOS Sonoma 14 and earlier
 

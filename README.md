@@ -17,6 +17,46 @@ The installation program installs
 
 See also the [Architeture](https://github.com/jonelo/jacksum/wiki/Architecture) of interaction between those components.
 
+## Download
+
+Download the latest [.dmg](https://github.com/jonelo/jacksum-for-macos/releases/latest).
+
+## Installation
+
+### 1. Open the .dmg
+
+Open the [.dmg](https://github.com/jonelo/jacksum-for-macos/releases/latest).
+
+### 2. Open on the .app
+
+#### For users of macOS Sequoia 15 and later
+
+With the release of macOS Sequoia, any app from an unidentified developer gives an error that the app is not opened. To open any of such apps, open "System Settings", and go to the "Privacy & Security" tab. On the "Privacy & Security" page, scroll down to last. Under the Security section, you have the option to open the application that was previously blocked. Click on the "Open Anyway" button to open it, and proceed with the prompts. Your app will be opened.
+
+To allow open apps on macOS from anywhere, open a Terminal and enter `sudo spctl --master-disable`. In the Security section, under "Allow applications from", there is a new menu item called "Anywhere."
+
+#### For users of macOS Sonoma 14 and earlier
+
+Control-click on the app icon, and choose Open from the shortcut menu. Gatekeeper warns you about the app, but gives you the option to bypass its default policy and open the app.
+
+<img width="981" alt="Open the Jacksum for macOS app" src="https://github.com/jonelo/jacksum-for-macos/assets/10409423/846dc6b3-28ac-488d-a76d-a6e44eb68657">
+<p><br/></p>
+
+#### For the command line interface lover
+
+You can open a Terminal to bypass both the graphical installation program and security warnings and run the script directly that is bundled with the installer app. Example for Jacksum 3.7.0:
+
+```
+% cd /Volumes/Jacksum\ for\ macOS
+% ./Jacksum\ 3.7.0\ for\ macOS.app/Contents/Resources/script
+```
+
+### 3. Check results
+
+At the end of the task a summary will tell you what file managers have been found and where Jacksum and HashGarten have been integrated.
+
+<img width="550" alt="After the installation" src="https://github.com/jonelo/jacksum-for-macos/assets/10409423/21a49953-3fa3-41a6-bfb4-21bd1e8ef0ef">
+
 
 ## System Requirements
 
@@ -27,7 +67,7 @@ See also the [Architeture](https://github.com/jonelo/jacksum/wiki/Architecture) 
 
 ### Software
 
-- macOS 10.11 (El Capitan) or later, tested up to macOS 15.0.1 (Sequoia)
+- macOS 10.11 (El Capitan) or later, tested up to macOS 15.1.1 (Sequoia)
 - optional: a supported file manager (see below) to call Jacksum and HashGarten from your flie manager
 
 #### Supported File Managers
@@ -65,39 +105,6 @@ The following file managers do not support DnD nor allow calling external script
 |--------------------------------------------------------------------------------|---------------------------------------------------------------|
 | [Spacedrive Alpha v0.4.2](https://www.spacedrive.com)                          | Free/Libre Open Source Software (AGPL 3.0)                    |
 
-
-## Installation
-
-#### 1. Download and open the .dmg
-
-Download and open the [.dmg](https://github.com/jonelo/jacksum-for-macos/releases/latest).
-
-#### 2. Open on the .app
-
-Control-click on the app icon, and choose Open from the shortcut menu. Gatekeeper warns you about the app, but gives you the option to bypass its default policy and open the app.
-
-<img width="981" alt="Open the Jacksum for macOS app" src="https://github.com/jonelo/jacksum-for-macos/assets/10409423/846dc6b3-28ac-488d-a76d-a6e44eb68657">
-<p><br/></p>
-
-> [!TIP]
-> **For users of macOS Sequoia 15.0 and later**
-> 
-> With the release of macOS Sequoia, any app from an unidentified developer gives an error that the app is not opened. To open any of such apps, open "System Settings", and go to the "Privacy & Security" tab. On the "Privacy & Security" page, scroll down to last. Under the Security section, you have the option to open the application that was previously blocked. Click on the "Open Anyway" button to open it, and proceed with the prompts. Your app will be opened.
->
-> To allow open apps on macOS from anywhere, open a Terminal and enter `sudo spctl --master-disable`. In the Security section, under "Allow applications from", there is a new menu item called "Anywhere."
-
-Alternatively, you can open a Terminal to bypass the graphical installation program and run the script directly that is bundled with the installer app. Example for Jacksum 3.7.0:
-
-```
-% cd /Volumes/Jacksum\ for\ macOS
-% ./Jacksum\ 3.7.0\ for\ macOS.app/Contents/Resources/script
-```
-
-#### 3. Check results
-
-At the end of the task a summary will tell you what file managers have been found and where Jacksum and HashGarten have been integrated.
-
-<img width="550" alt="After the installation" src="https://github.com/jonelo/jacksum-for-macos/assets/10409423/21a49953-3fa3-41a6-bfb4-21bd1e8ef0ef">
 
 
 ## How to use it

@@ -2,7 +2,7 @@
 
 # Jacksum for macOS
 
-![Jacksum for macOS app](https://github.com/user-attachments/assets/82426e6a-966f-4993-a8e6-0d0c6c230933)
+<img width="696" height="440" alt="image" src="https://github.com/user-attachments/assets/3b9652b1-c98e-4fc9-abcd-7ffba716d915" />
 
 ## Abstract
 
@@ -50,11 +50,11 @@ Control-click on the app icon, and choose Open from the shortcut menu. Gatekeepe
 #### For users of the command line interface
 
 > [!TIP]
-> You can open a Terminal to bypass both the graphical installation program and security warnings and run the script directly that is bundled with the installer app. Example for Jacksum 3.7.0:
+> You can open a Terminal to bypass both the graphical installation program and security warnings and run the script directly that is bundled with the installer app. Example for Jacksum 4.0.0:
 >
 >```
 >% cd /Volumes/Jacksum\ for\ macOS
->% ./Jacksum\ 3.7.0\ for\ macOS.app/Contents/Resources/script
+>% ./Jacksum\ 4.0.0\ for\ macOS.app/Contents/Resources/script
 >```
 
 ### 3. Check results
@@ -172,12 +172,12 @@ For more information see also [Jacksum](https://github.com/jonelo/jacksum)
 Open Finder, click on the script menu, and select "Open Scripts Folder", followed by "Open Finder Scripts Folder".
 Alternatively hit ⇧⌘G, enter the path to the Finder scripts folder `~/Library/Scripts/Applications/Finder`, and click on the Go button.
 
-Click on `Jacksum 3.7.0`, and remove any .scpt file that you do not want to see.
+Click on `Jacksum 4.0.0`, and remove any .scpt file that you do not want to see.
 
 ### Path Finder
 
 Open Path Finder, click on the script menu, and select "Open Scripts Folder", followed by "Open Path Finder Scripts Folder".
-Click on `Jacksum 3.7.0`, and remove any .scpt file that you do not want to see.
+Click on `Jacksum 4.0.0`, and remove any .scpt file that you do not want to see.
 
 ### muCommander
 

@@ -7,7 +7,7 @@
 ## Abstract
 
 Jacksum for macOS is an installation program with which you can easily access functions of [Jacksum](https://github.com/jonelo/jacksum) on macOS.
-In other words, it adds more than 480 hash algorithms to your Mac and you can use them with different user interfaces to calculate hash values, verify data integrity, and many more. See the [Jacksum](https://github.com/jonelo/jacksum) page for more info.
+In other words, it adds more than 586 hash algorithms to your Mac and you can use them with different user interfaces to calculate hash values, verify data integrity, and many more. See the [Jacksum](https://github.com/jonelo/jacksum) page for more info.
 
 The installation program installs
 
@@ -73,7 +73,7 @@ At the end of the task a summary will tell you what file managers have been foun
 
 ### Software
 
-- macOS 10.11 (El Capitan) or later, tested up to macOS 15.1.1 (Sequoia)
+- macOS 11 (Big Sur) or later, tested up to macOS 15.7.7 (Sequoia) on x64 and macOS 26.6.2 on aarch64
 - optional: a supported file manager (see below) to call Jacksum and HashGarten from your flie manager
 
 #### Supported File Managers
@@ -101,15 +101,6 @@ The following File Managers have been tested successfully to work with Jacksum a
 | [Path Finder](https://www.cocoatech.io)                                        | DnD + Script Menu     | Commercial Software                                           |
 | [Transmit](https://panic.com/transmit)                                         | DnD                   | Commercial Software (Trial)                                   |
 | [VioletGiraffe FileCommander](https://github.com/VioletGiraffe/file-commander) | DnD                   | Free/Libre Open Source Software (Apache 2.0)                  |
-
-
-#### Not Yet Supported FLOSS File Managers
-
-The following file managers do not support DnD nor allow calling external scripts.
-
-| File Manager                                                                   | Comment                                                       |
-|--------------------------------------------------------------------------------|---------------------------------------------------------------|
-| [Spacedrive Alpha v0.4.2](https://www.spacedrive.com)                          | Free/Libre Open Source Software (AGPL 3.0)                    |
 
 
 

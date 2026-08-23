@@ -1,3 +1,5 @@
 /resources/app/Java/
 /resources/app/Open*.tar.gz
 /output/
+.DS_Store
+.idea

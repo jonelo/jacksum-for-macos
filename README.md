@@ -200,6 +200,43 @@ If Marta was found during installation, type
 % rm $(grep -il jacksum *.lua | xargs)
 ```
 
+## For Developers
+
+### Get the repo
+
+Clone this repo.
+
+### Update the JREs
+
+Go to https://adoptium.net/de/temurin/releases
+
+For the latest JRE release, download for both architectures 'x64' and 'aarch64'
+the JRE '.tar.gz' files. Note that by default macOS' Safari extracts the '.tar.gz' after the download. So you have to gzip them again.
+
+'''
+gzip -9 *.tar
+'''
+
+Move the '.tar.gz' files to the 'resources/app/' directory.
+
+### Update Hashgarten
+
+Update Hashgarten under 'resources/app/HashGarten.app/'.
+
+Edit 'config/make_all.cfg' and update
+- APP_VERSION to the version of Jacksum. 
+- DMG_VERSION to a new minor release.
+
+Edit 'config/make_app.cfg' and update
+- APP_JAR_FILE_HASHGARTEN to the version of Hashgarten
+- APP_JAR_FILE_FLATLAF to the version of the flatlaf.jar
+
+### Make the dmg that contains the app
+
+'''
+cd bin
+./make_all.sh
+'''
 
 ## Further Information
 

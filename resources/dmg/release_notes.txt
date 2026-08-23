@@ -1,5 +1,8 @@
 Release Notes
 -------------
+2.5.0, Aug 22, 2026
+- bundled Jacksum 4.0.0, HashGarten 0.19.0, and OpenJDK Runtime 25.0.4.1 from adoptium.net
+
 2.4.0, Oct 27, 2024
 - bundled Jacksum 3.7.0, HashGarten 0.18.0, and OpenJDK Runtime 21.0.5 from adoptium.net
 

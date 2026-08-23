@@ -1,7 +1,7 @@
 #!/bin/bash
 # 
 #  Jacksum File Browser Integration for macOS
-#  Copyright (c) 2010-2024 Dipl.-Inf. (FH) Johann N. Loefflmann
+#  Copyright (c) 2010-2026 Dipl.-Inf. (FH) Johann N. Loefflmann
 #
 #  This program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -19,7 +19,7 @@
 #
 
 PATH="/sbin:/usr/sbin:/bin:/usr/bin"
-JACKSUM_VERSION=3.7.0
+JACKSUM_VERSION=4.0.0
 
 
 #---------------------------------------------------------------
@@ -274,7 +274,7 @@ function createJacksumLauncher {
   echo "Creating $LAUNCHER ..."
   cat << "EOL" > "$LAUNCHER"
 #!/bin/bash
-/Applications/HashGarten.app/Contents/Java/jre_latest/Contents/Home/bin/java -jar "/Applications/HashGarten.app/Contents/MacOS/lib/jacksum-3.7.0.jar" "$@"
+/Applications/HashGarten.app/Contents/Java/jre_latest/Contents/Home/bin/java -jar "/Applications/HashGarten.app/Contents/MacOS/lib/jacksum-4.0.0.jar" "$@"
 EOL
 
   chmod +x "$LAUNCHER"

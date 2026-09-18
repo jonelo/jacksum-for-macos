@@ -59,6 +59,26 @@ end tell
 
 
 #---------------------------------------------------------------
+function applescript_for_HoudahSpot {
+#---------------------------------------------------------------
+echo -n 'tell application "HoudahSpot"
+
+	set allFiles to ""
+	set theSelection to (get selection)
+	if theSelection is not missing value then
+		repeat with resultItem in theSelection
+			set thisFile to path of resultItem
+			set thisFileQuoted to quoted form of thisFile
+			set allFiles to allFiles & " " & thisFileQuoted
+		end repeat
+	end if
+end tell
+
+' >> "${APPLE_SCRIPT}"
+}
+
+
+#---------------------------------------------------------------
 function update_progress_bar {
 #---------------------------------------------------------------
   FINISHED=$[$FINISHED+$1]
@@ -219,6 +239,14 @@ function enableOrDisableFileManagers {
   else
     MARTA=0
   fi
+
+  # HoudahSpot
+  if [ -d "/Applications/HoudahSpot.app" ]; then
+    HOUDAHSPOT=1
+    TOTAL_COUNT=$[$TOTAL_COUNT+$COMMANDS_COUNT]
+  else
+    HOUDAHSPOT=0
+  fi
 } 
 
 
@@ -363,6 +391,9 @@ EOL
   if [ $MARTA -eq 1 ]; then
     printf "  - Marta\n"
   fi
+  if [ $HOUDAHSPOT -eq 1 ]; then
+    printf "  - HoudahSpot\n"
+  fi
 
 cat << EOL
 
@@ -393,6 +424,10 @@ function setupAllFileManagers {
 
   if [ $MARTA -eq 1 ]; then
       setup_marta
+  fi
+
+  if [ $HOUDAHSPOT -eq 1 ]; then
+      setup "HoudahSpot"
   fi
 }
 

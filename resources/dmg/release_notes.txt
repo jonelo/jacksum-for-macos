@@ -1,5 +1,8 @@
 Release Notes
 -------------
+2.6.0, Sep 18, 2026
+- added support for HoudahSpot (houdah.com)
+
 2.5.0, Aug 22, 2026
 - bundled Jacksum 4.0.0, HashGarten 0.19.0, and OpenJDK Runtime 25.0.4.1 from adoptium.net
 

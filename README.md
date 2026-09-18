@@ -99,9 +99,9 @@ HashGarten have been integrated.
 **Finder**, which supports the Apple Script Menu, is fully supported by this integration program. In
 addition, some file managers that provide proprietary interfaces are supported as well.
 
-The installation program sets up the integration for **Finder**, **Path Finder**, **muCommander** and
-**Marta**. All other file managers in the table below either work by drag & drop only, or require a
-few manual steps that are documented in the wiki.
+The installation program sets up the integration for **Finder**, **Path Finder**, **HoudahSpot**,
+**muCommander** and **Marta**. All other file managers in the table below either work by drag & drop
+only, or require a few manual steps that are documented in the wiki.
 
 > [!TIP]
 > If your preferred file manager supports neither the Apple Script Menu nor external scripts nor
@@ -121,6 +121,7 @@ The following file managers have been tested successfully with Jacksum and HashG
 | [Finder](https://support.apple.com/guide/mac-help/mchlp2605/mac)               | Drag & drop + Script Menu (installer)  | Bundled with macOS, the standard file manager from Apple                                                               |
 | [ForkLift 4](https://binarynights.com/)                                        | Drag & drop + proprietary API (manual) | Commercial Software (Trial), [a few extra steps required](https://github.com/jonelo/jacksum-for-macos/wiki/ForkLift-4) |
 | [HiFile](https://www.hifile.app/)                                              | Drag & drop                            | Commercial Software (Trial)                                                                                            |
+| [HoudahSpot](https://www.houdah.com/houdahSpot/)                               | Drag & drop + Script Menu (installer)  | Commercial Software (Trial), a search tool rather than a file browser                                                     |
 | [Marta](https://marta.sh)                                                      | Drag & drop + plug-in (installer)      | Freeware                                                                                                               |
 | [muCommander](https://www.mucommander.com)                                     | Drag & drop + plug-in (installer)      | Free/Libre Open Source Software (GPLv3)                                                                                |
 | [Nimble Commander](https://magnumbytes.com)                                    | Drag & drop                            | Free/Libre Open Source Software (GPLv3)                                                                                |
@@ -157,6 +158,20 @@ Open Path Finder, select files and folders, and choose an action from the Jacksu
 
 From here, [HashGarten](https://github.com/jonelo/HashGarten) takes over and you can calculate
 checksums, CRCs and hash values of the selected files.
+
+### Using HoudahSpot and the Script Menu
+
+Open HoudahSpot, run a search, select results, and choose an action from the Jacksum script folder.
+
+<!-- TODO: screenshot of the Jacksum script menu in HoudahSpot -->
+
+From here, [HashGarten](https://github.com/jonelo/HashGarten) takes over and you can calculate
+checksums, CRCs and hash values of the selected files.
+
+> [!NOTE]
+> HoudahSpot is a search tool, so its results usually live in many different folders. The integration
+> prints the paths relative to the first selected entry, which in that case can produce paths such as
+> `../../Documents/report.pdf`.
 
 ### Using muCommander
 
@@ -206,6 +221,12 @@ Open `Jacksum 4.0.0` and remove any .scpt file that you do not want to see.
 Open Path Finder, click the script menu, and select "Open Scripts Folder", followed by "Open Path
 Finder Scripts Folder". Open `Jacksum 4.0.0` and remove any .scpt file that you do not want to see.
 
+### HoudahSpot
+
+Press ⇧⌘G in Finder, enter the path to the HoudahSpot scripts folder
+`~/Library/Scripts/Applications/HoudahSpot`, and click the "Go" button. Open `Jacksum 4.0.0` and
+remove any .scpt file that you do not want to see.
+
 ### muCommander
 
 The commands for muCommander are defined in `/Applications/HashGarten.app/mucommander.commands.xml`.
@@ -251,6 +272,14 @@ If Path Finder was found during the installation, type
 
 ```
 % rm -rf ~/Library/Scripts/Applications/Path\ Finder/Jacksum*
+```
+
+### HoudahSpot
+
+If HoudahSpot was found during the installation, type
+
+```
+% rm -rf ~/Library/Scripts/Applications/HoudahSpot/Jacksum*
 ```
 
 ### muCommander

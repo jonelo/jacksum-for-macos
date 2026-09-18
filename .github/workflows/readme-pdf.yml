@@ -1,0 +1,53 @@
+# Renders README.md to a PDF that looks like the file does on github.com and
+# offers it as a build artifact. On a release the PDF is attached to it.
+#
+# The .dmg keeps shipping the readme.pdf that bin/make_all.sh creates on macOS,
+# because the fonts of a Linux runner differ from the ones of a Mac, and because
+# Chrome does not produce byte identical PDFs anyway.
+
+name: readme.pdf
+
+on:
+  push:
+    paths:
+      - 'README.md'
+      - 'bin/make_pdf.sh'
+      - 'config/make_pdf.cfg'
+      - 'resources/pdf/**'
+      - '.github/workflows/readme-pdf.yml'
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  readme-pdf:
+    runs-on: ubuntu-latest
+    permissions:
+      # needed by the last step only, which attaches the PDF to a release
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Show the Chrome that is preinstalled on the runner
+        run: google-chrome --version
+
+      - name: Render README.md
+        env:
+          # raises the rate limit of api.github.com/markdown to 5000 requests/hour
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: bin/make_pdf.sh --ci -o readme.pdf README.md
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: readme-pdf
+          path: readme.pdf
+          if-no-files-found: error
+
+      - name: Attach the PDF to the release
+        if: github.event_name == 'release'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release upload "${{ github.event.release.tag_name }}" readme.pdf --clobber

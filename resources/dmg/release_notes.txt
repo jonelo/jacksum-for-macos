@@ -4,8 +4,9 @@ Release Notes
 - added support for HoudahSpot (houdah.com)
 - added support for Tembo (houdah.com)
 - added four Quick Actions to the macOS Services menu, they work in
-  every app that offers a file selection there, such as Finder and
-  HoudahSpot
+  many apps that offer a file selection there, such as Finder,
+  HoudahSpot, Path Finder and ForkLift; see the README for the file
+  managers that have been tested
 
 2.5.0, Aug 22, 2026
 - bundled Jacksum 4.0.0, HashGarten 0.19.0, and OpenJDK Runtime 25.0.4.1 from adoptium.net

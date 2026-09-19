@@ -100,9 +100,10 @@ HashGarten have been integrated.
 addition, some file managers that provide proprietary interfaces are supported as well.
 
 The installation program sets up the integration for **Finder**, **Path Finder**, **HoudahSpot**,
-**Tembo**, **muCommander** and **Marta**. It also installs four **Quick Actions**, which are available in the
-Services menu of any app that offers a file selection there. All other file managers in the table below either work by drag & drop
-only, or require a few manual steps that are documented in the wiki.
+**Tembo**, **muCommander** and **Marta**. It also installs four **Quick Actions**, which show up in the
+Services menu of many apps - but not of all of them, see the "Integration" column of the table below.
+All other file managers in the table either work by drag & drop only, or require a few manual steps
+that are documented in the wiki.
 
 > [!TIP]
 > If your preferred file manager supports neither the Apple Script Menu nor external scripts nor
@@ -112,30 +113,33 @@ only, or require a few manual steps that are documented in the wiki.
 
 The following file managers have been tested successfully with Jacksum and HashGarten:
 
-| File Manager                                                                   | Integration                                      | Comment                                                                                                                |
-|--------------------------------------------------------------------------------|--------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
-| [Commander One](https://mac.eltima.com/file-manager.html)                      | Drag & drop                                      | Commercial Software                                                                                                    |
-| [CRAX Commander](https://crax.soft4u2.com)                                     | Drag & drop                                      | Commercial Software (Demo)                                                                                             |
-| [Dropover](https://dropoverapp.com/)                                           | Drag & drop                                      | Commercial Software                                                                                                    |
-| [EasyFind](https://www.devontechnologies.com/apps/freeware)                    | Drag & drop, but no Services                     | Freeware, its Services menu offers the selection as a URL only, so the Quick Actions do not appear there               |
-| [Fileside](https://www.fileside.app)                                           | Drag & drop + proprietary API (manual)           | Commercial Software (Trial), [a few extra steps required](https://github.com/jonelo/jacksum-for-macos/wiki/Fileside)   |
-| [Finder](https://support.apple.com/guide/mac-help/mchlp2605/mac)               | Drag & drop + Script Menu (installer) + Services | Bundled with macOS, the standard file manager from Apple                                                               |
-| [ForkLift 4](https://binarynights.com/)                                        | Drag & drop + proprietary API (manual)           | Commercial Software (Trial), [a few extra steps required](https://github.com/jonelo/jacksum-for-macos/wiki/ForkLift-4) |
-| [HiFile](https://www.hifile.app/)                                              | Drag & drop                                      | Commercial Software (Trial)                                                                                            |
-| [HoudahSpot](https://www.houdah.com/houdahSpot/)                               | Drag & drop + Script Menu (installer) + Services | Commercial Software (Trial), a search tool rather than a file browser                                                  |
-| [Marta](https://marta.sh)                                                      | Drag & drop + plug-in (installer)                | Freeware                                                                                                               |
-| [muCommander](https://www.mucommander.com)                                     | Drag & drop + plug-in (installer)                | Free/Libre Open Source Software (GPLv3)                                                                                |
-| [Nimble Commander](https://magnumbytes.com)                                    | Drag & drop                                      | Free/Libre Open Source Software (GPLv3)                                                                                |
-| [Path Finder](https://www.cocoatech.io)                                        | Drag & drop + Script Menu (installer)            | Commercial Software                                                                                                    |
-| [Tembo](https://www.houdah.com/tembo/)                                         | Drag & drop + Script Menu (installer) + Services | Commercial Software (Trial), a search tool rather than a file browser                                                  |
-| [Transmit](https://panic.com/transmit)                                         | Drag & drop                                      | Commercial Software (Trial)                                                                                            |
-| [VioletGiraffe FileCommander](https://github.com/VioletGiraffe/file-commander) | Drag & drop                                      | Free/Libre Open Source Software (Apache 2.0)                                                                           |
+| File Manager                                                                   | Integration                                         | Comment                                                                                                                |
+|--------------------------------------------------------------------------------|-----------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
+| [Commander One](https://mac.eltima.com/file-manager.html)                      | Drag & drop + Services (partly)                     | Commercial Software, its Services menu hands over only the item currently selected, a multiple selection is ignored    |
+| [CRAX Commander](https://crax.soft4u2.com)                                     | Drag & drop, no Services                            | Commercial Software (Demo)                                                                                             |
+| [Dropover](https://dropoverapp.com/)                                           | Drag & drop, no Services                            | Commercial Software                                                                                                    |
+| [EasyFind](https://www.devontechnologies.com/apps/freeware)                    | Drag & drop, no Services                            | Freeware, its Services menu offers the selection as a URL only, so the Quick Actions do not appear there               |
+| [Fileside](https://www.fileside.app)                                           | Drag & drop + proprietary API (manual), no Services | Commercial Software (Trial), [a few extra steps required](https://github.com/jonelo/jacksum-for-macos/wiki/Fileside)   |
+| [Finder](https://support.apple.com/guide/mac-help/mchlp2605/mac)               | Drag & drop + Script Menu (installer) + Services    | Bundled with macOS, the standard file manager from Apple                                                               |
+| [ForkLift 4](https://binarynights.com/)                                        | Drag & drop + proprietary API (manual) + Services   | Commercial Software (Trial), [a few extra steps required](https://github.com/jonelo/jacksum-for-macos/wiki/ForkLift-4) |
+| [HiFile](https://www.hifile.app/)                                              | Drag & drop, no Services                            | Commercial Software (Trial)                                                                                            |
+| [HoudahSpot](https://www.houdah.com/houdahSpot/)                               | Drag & drop + Script Menu (installer) + Services    | Commercial Software (Trial), a search tool rather than a file browser                                                  |
+| [Marta](https://marta.sh)                                                      | Drag & drop + plug-in (installer) + Services        | Freeware                                                                                                               |
+| [muCommander](https://www.mucommander.com)                                     | Drag & drop + plug-in (installer), no Services      | Free/Libre Open Source Software (GPLv3)                                                                                |
+| [Nimble Commander](https://magnumbytes.com)                                    | Drag & drop + Services                              | Free/Libre Open Source Software (GPLv3)                                                                                |
+| [Path Finder](https://www.cocoatech.io)                                        | Drag & drop + Script Menu (installer) + Services    | Commercial Software                                                                                                    |
+| [Tembo](https://www.houdah.com/tembo/)                                         | Drag & drop + Script Menu (installer) + Services    | Commercial Software (Trial), a search tool rather than a file browser                                                  |
+| [Transmit](https://panic.com/transmit)                                         | Drag & drop + Services                              | Commercial Software (Trial)                                                                                            |
+| [VioletGiraffe FileCommander](https://github.com/VioletGiraffe/file-commander) | Drag & drop                                         | Free/Libre Open Source Software (Apache 2.0)                                                                           |
 
 "(installer)" means that the installation program creates the integration for you. "(manual)" means
 that the file manager offers a suitable interface, but that you have to set it up yourself as
-described on the linked wiki page. "Services" means that the four Quick Actions have been seen in
-that file manager's Services menu; they are installed either way, so a file manager without that
-note may still offer them - it just has not been verified yet.
+described on the linked wiki page. "Services" means that the four Quick Actions have been verified in
+that file manager's Services menu and that they work without restrictions, that is with a multiple
+selection of both files and directories. "Services (partly)" means that they do appear, but with the
+restriction that is described in the Comment column. "no Services" means that the Quick Actions do
+not appear in that file manager's Services menu at all. They are installed either way, so a file
+manager without any of those three notes may still offer them - it just has not been verified yet.
 
 ## How to use it
 

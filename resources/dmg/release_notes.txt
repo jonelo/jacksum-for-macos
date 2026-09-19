@@ -2,6 +2,10 @@ Release Notes
 -------------
 2.6.0, Sep 18, 2026
 - added support for HoudahSpot (houdah.com)
+- added support for Tembo (houdah.com)
+- added four Quick Actions to the macOS Services menu, they work in
+  every app that offers a file selection there, such as Finder and
+  HoudahSpot
 
 2.5.0, Aug 22, 2026
 - bundled Jacksum 4.0.0, HashGarten 0.19.0, and OpenJDK Runtime 25.0.4.1 from adoptium.net

@@ -100,7 +100,8 @@ HashGarten have been integrated.
 addition, some file managers that provide proprietary interfaces are supported as well.
 
 The installation program sets up the integration for **Finder**, **Path Finder**, **HoudahSpot**,
-**muCommander** and **Marta**. All other file managers in the table below either work by drag & drop
+**Tembo**, **muCommander** and **Marta**. It also installs four **Quick Actions**, which are available in the
+Services menu of any app that offers a file selection there. All other file managers in the table below either work by drag & drop
 only, or require a few manual steps that are documented in the wiki.
 
 > [!TIP]
@@ -111,27 +112,30 @@ only, or require a few manual steps that are documented in the wiki.
 
 The following file managers have been tested successfully with Jacksum and HashGarten:
 
-| File Manager                                                                   | Integration                            | Comment                                                                                                                |
-|--------------------------------------------------------------------------------|----------------------------------------|------------------------------------------------------------------------------------------------------------------------|
-| [Commander One](https://mac.eltima.com/file-manager.html)                      | Drag & drop                            | Commercial Software                                                                                                    |
-| [CRAX Commander](https://crax.soft4u2.com)                                     | Drag & drop                            | Commercial Software (Demo)                                                                                             |
-| [Dropover](https://dropoverapp.com/)                                           | Drag & drop                            | Commercial Software                                                                                                    |
-| [EasyFind](https://www.devontechnologies.com/apps/freeware)                    | Drag & drop                            | Freeware                                                                                                               |
-| [Fileside](https://www.fileside.app)                                           | Drag & drop + proprietary API (manual) | Commercial Software (Trial), [a few extra steps required](https://github.com/jonelo/jacksum-for-macos/wiki/Fileside)   |
-| [Finder](https://support.apple.com/guide/mac-help/mchlp2605/mac)               | Drag & drop + Script Menu (installer)  | Bundled with macOS, the standard file manager from Apple                                                               |
-| [ForkLift 4](https://binarynights.com/)                                        | Drag & drop + proprietary API (manual) | Commercial Software (Trial), [a few extra steps required](https://github.com/jonelo/jacksum-for-macos/wiki/ForkLift-4) |
-| [HiFile](https://www.hifile.app/)                                              | Drag & drop                            | Commercial Software (Trial)                                                                                            |
-| [HoudahSpot](https://www.houdah.com/houdahSpot/)                               | Drag & drop + Script Menu (installer)  | Commercial Software (Trial), a search tool rather than a file browser                                                     |
-| [Marta](https://marta.sh)                                                      | Drag & drop + plug-in (installer)      | Freeware                                                                                                               |
-| [muCommander](https://www.mucommander.com)                                     | Drag & drop + plug-in (installer)      | Free/Libre Open Source Software (GPLv3)                                                                                |
-| [Nimble Commander](https://magnumbytes.com)                                    | Drag & drop                            | Free/Libre Open Source Software (GPLv3)                                                                                |
-| [Path Finder](https://www.cocoatech.io)                                        | Drag & drop + Script Menu (installer)  | Commercial Software                                                                                                    |
-| [Transmit](https://panic.com/transmit)                                         | Drag & drop                            | Commercial Software (Trial)                                                                                            |
-| [VioletGiraffe FileCommander](https://github.com/VioletGiraffe/file-commander) | Drag & drop                            | Free/Libre Open Source Software (Apache 2.0)                                                                           |
+| File Manager                                                                   | Integration                                      | Comment                                                                                                                |
+|--------------------------------------------------------------------------------|--------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
+| [Commander One](https://mac.eltima.com/file-manager.html)                      | Drag & drop                                      | Commercial Software                                                                                                    |
+| [CRAX Commander](https://crax.soft4u2.com)                                     | Drag & drop                                      | Commercial Software (Demo)                                                                                             |
+| [Dropover](https://dropoverapp.com/)                                           | Drag & drop                                      | Commercial Software                                                                                                    |
+| [EasyFind](https://www.devontechnologies.com/apps/freeware)                    | Drag & drop, but no Services                     | Freeware, its Services menu offers the selection as a URL only, so the Quick Actions do not appear there               |
+| [Fileside](https://www.fileside.app)                                           | Drag & drop + proprietary API (manual)           | Commercial Software (Trial), [a few extra steps required](https://github.com/jonelo/jacksum-for-macos/wiki/Fileside)   |
+| [Finder](https://support.apple.com/guide/mac-help/mchlp2605/mac)               | Drag & drop + Script Menu (installer) + Services | Bundled with macOS, the standard file manager from Apple                                                               |
+| [ForkLift 4](https://binarynights.com/)                                        | Drag & drop + proprietary API (manual)           | Commercial Software (Trial), [a few extra steps required](https://github.com/jonelo/jacksum-for-macos/wiki/ForkLift-4) |
+| [HiFile](https://www.hifile.app/)                                              | Drag & drop                                      | Commercial Software (Trial)                                                                                            |
+| [HoudahSpot](https://www.houdah.com/houdahSpot/)                               | Drag & drop + Script Menu (installer) + Services | Commercial Software (Trial), a search tool rather than a file browser                                                  |
+| [Marta](https://marta.sh)                                                      | Drag & drop + plug-in (installer)                | Freeware                                                                                                               |
+| [muCommander](https://www.mucommander.com)                                     | Drag & drop + plug-in (installer)                | Free/Libre Open Source Software (GPLv3)                                                                                |
+| [Nimble Commander](https://magnumbytes.com)                                    | Drag & drop                                      | Free/Libre Open Source Software (GPLv3)                                                                                |
+| [Path Finder](https://www.cocoatech.io)                                        | Drag & drop + Script Menu (installer)            | Commercial Software                                                                                                    |
+| [Tembo](https://www.houdah.com/tembo/)                                         | Drag & drop + Script Menu (installer) + Services | Commercial Software (Trial), a search tool rather than a file browser                                                  |
+| [Transmit](https://panic.com/transmit)                                         | Drag & drop                                      | Commercial Software (Trial)                                                                                            |
+| [VioletGiraffe FileCommander](https://github.com/VioletGiraffe/file-commander) | Drag & drop                                      | Free/Libre Open Source Software (Apache 2.0)                                                                           |
 
 "(installer)" means that the installation program creates the integration for you. "(manual)" means
 that the file manager offers a suitable interface, but that you have to set it up yourself as
-described on the linked wiki page.
+described on the linked wiki page. "Services" means that the four Quick Actions have been seen in
+that file manager's Services menu; they are installed either way, so a file manager without that
+note may still offer them - it just has not been verified yet.
 
 ## How to use it
 
@@ -172,6 +176,45 @@ checksums, CRCs and hash values of the selected files.
 > HoudahSpot is a search tool, so its results usually live in many different folders. The integration
 > prints the paths relative to the first selected entry, which in that case can produce paths such as
 > `../../Documents/report.pdf`.
+
+### Using Tembo and the Script Menu
+
+Open Tembo, run a search, select results, and choose an action from the Jacksum script folder.
+
+<!-- TODO: screenshot of the Jacksum script menu in Tembo -->
+
+From here, [HashGarten](https://github.com/jonelo/HashGarten) takes over and you can calculate
+checksums, CRCs and hash values of the selected files.
+
+> [!NOTE]
+> Tembo is a search tool, so its results usually live in many different folders. The integration
+> prints the paths relative to the first selected entry, which in that case can produce paths such as
+> `../../Documents/report.pdf`.
+
+### Using the Services menu (Quick Actions)
+
+Unlike the integrations above, the four Quick Actions are not tied to a single app. Select files and
+folders, right-click, and choose an action from the Services submenu. In the Finder they also appear
+in the "Quick Actions" submenu of the context menu.
+
+<!-- TODO: screenshot of the Jacksum Quick Actions in the Services menu -->
+
+From here, [HashGarten](https://github.com/jonelo/HashGarten) takes over and you can calculate
+checksums, CRCs and hash values of the selected files.
+
+> [!NOTE]
+> An app only offers the Quick Actions if it hands its selection to the Services menu as files. Most
+> apps do, the Finder and HoudahSpot for example. EasyFind does not: it offers its selection as a URL
+> only, so you will not find the Jacksum items there. Use drag & drop with EasyFind instead.
+
+> [!NOTE]
+> Apps that were already running while you installed keep their cached Services menu. Restart such an
+> app if its menu entries show up without the Jacksum icon, or without showing up at all.
+
+> [!NOTE]
+> The Quick Actions run under Automator rather than under HashGarten. The first time you call one for
+> a file on your Desktop, in Documents or in Downloads, macOS can ask you to grant Automator access to
+> that folder.
 
 ### Using muCommander
 
@@ -226,6 +269,33 @@ Finder Scripts Folder". Open `Jacksum 4.0.0` and remove any .scpt file that you 
 Press ⇧⌘G in Finder, enter the path to the HoudahSpot scripts folder
 `~/Library/Scripts/Applications/HoudahSpot`, and click the "Go" button. Open `Jacksum 4.0.0` and
 remove any .scpt file that you do not want to see.
+
+### Tembo
+
+Press ⇧⌘G in Finder, enter the path to the Tembo scripts folder
+`~/Library/Scripts/Applications/Tembo`, and click the "Go" button. Open `Jacksum 4.0.0` and remove
+any .scpt file that you do not want to see.
+
+### Quick Actions
+
+There are two ways to get rid of single entries or of the whole Services integration.
+
+**Switch them off, without removing anything.** Open System Settings → Keyboard → "Keyboard
+Shortcuts…" → Services, and untick the four entries that start with "Jacksum - ". macOS keeps that
+choice in `~/Library/Preferences/pbs.plist`, not in the bundles, so it is not affected by what the
+installation program writes. This is the better option if you only want a quieter menu.
+
+**Remove them.** The Quick Actions are ordinary bundles in `~/Library/Services`, named
+`Jacksum - <action>.workflow`. Delete the ones you do not want, or open one with Automator to modify
+it:
+
+```
+% rm -rf ~/Library/Services/Jacksum\ -\ 4\)\ Edit\ script.workflow
+% /System/Library/CoreServices/pbs -flush
+```
+
+The `pbs -flush` makes the change visible without a logout. Note that the next run of the
+installation program recreates every bundle, including the ones you deleted.
 
 ### muCommander
 
@@ -282,6 +352,14 @@ If HoudahSpot was found during the installation, type
 % rm -rf ~/Library/Scripts/Applications/HoudahSpot/Jacksum*
 ```
 
+### Tembo
+
+If Tembo was found during the installation, type
+
+```
+% rm -rf ~/Library/Scripts/Applications/Tembo/Jacksum*
+```
+
 ### muCommander
 
 If muCommander was found during the installation, remove the symbolic link that the installation
@@ -310,6 +388,24 @@ If Marta was found during the installation, type
 
 Note that `grep` searches the contents of the plug-ins, so review the list first if you have other
 plug-ins that happen to mention Jacksum.
+
+### Quick Actions
+
+The Quick Actions are always installed, no matter which file managers were found. Remove all four of
+them and update the Services cache:
+
+```
+% rm -rf ~/Library/Services/Jacksum\ -\ *.workflow
+% /System/Library/CoreServices/pbs -flush
+```
+
+That is all there is to it: each bundle is self contained, so nothing is left behind anywhere else.
+
+> [!NOTE]
+> An app that is running while you remove the bundles keeps its Services menu until you restart it,
+> the Finder included. If an entry is still listed, quit and reopen that app. If you would rather
+> keep the Quick Actions but not see them, untick them in System Settings instead, as described
+> under [How to configure it](#quick-actions).
 
 ## For Developers
 

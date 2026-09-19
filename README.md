@@ -167,7 +167,7 @@ checksums, CRCs and hash values of the selected files.
 
 Open HoudahSpot, run a search, select results, and choose an action from the Jacksum script folder.
 
-<!-- TODO: screenshot of the Jacksum script menu in HoudahSpot -->
+<img width="441" height="390" alt="image" src="https://github.com/user-attachments/assets/6efa4141-e16d-4c02-afa8-20dd9ad4446b" />
 
 From here, [HashGarten](https://github.com/jonelo/HashGarten) takes over and you can calculate
 checksums, CRCs and hash values of the selected files.

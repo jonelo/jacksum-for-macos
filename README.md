@@ -90,7 +90,7 @@ HashGarten have been integrated.
 
 ### Software
 
-- macOS 11 (Big Sur) or later, tested up to macOS 15.7.7 (Sequoia) on x64 and macOS 26.6.2 on aarch64
+- macOS 11 (Big Sur) or later, tested up to macOS 15.8 (Sequoia) on x64 and macOS 27.0 on aarch64
 - optional: a supported file manager (see below), so that you can call Jacksum and HashGarten from
   your file manager
 

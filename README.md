@@ -35,7 +35,7 @@ Open the [.dmg](https://github.com/jonelo/jacksum-for-macos/releases/latest).
 
 #### For users of macOS Sequoia 15 and later
 
-Since macOS Sequoia, an app from an unidentified developer no longer opens on a Control-click; macOS
+Since macOS Sequoia, an app from an unidentified developer no longer opens with a Control-click; macOS
 reports that the app cannot be opened.
 
 > [!TIP]
@@ -46,11 +46,11 @@ reports that the app cannot be opened.
 > If you prefer to allow apps from anywhere, open a Terminal and enter `sudo spctl --global-disable`
 > (the older `spctl --master-disable` has been deprecated). An "Anywhere" option then appears in
 > System Settings under "Privacy & Security" → "Allow applications from", which restores the
-> behavior of Sonoma and earlier releases of macOS. Note that this lowers the security of your
-> entire system, not just for this app, so consider re-enabling it afterwards.
+> behavior of Sonoma and earlier releases of macOS. Note that this lowers security for your
+> entire system, not just for this app, so consider re-enabling Gatekeeper afterwards.
 >
 > To verify the integrity of the app, compare its hash values with the ones published in the release
-> notes of the respective release. To calculate hash values you can use a hash tool such as
+> notes of that release. To calculate hash values you can use a hash tool such as
 > [Jacksum for macOS](https://github.com/jonelo/jacksum-for-macos).
 
 #### For users of macOS Sonoma 14 and earlier
@@ -65,7 +65,7 @@ app, but it also offers you the option to bypass its default policy and open the
 
 > [!TIP]
 > You can open a Terminal in order to bypass both the graphical installation program and the security
-> warnings, and run the script that is bundled with the installer app directly. Example for
+> warnings, and directly run the script that is bundled with the installer app. Example for
 > Jacksum 4.0.0:
 >
 >```
@@ -92,21 +92,21 @@ HashGarten have been integrated.
 
 - macOS 11 (Big Sur) or later, tested up to macOS 15.8 (Sequoia) on x64 and macOS 27.0 on aarch64
 - optional: a supported file manager (see below), so that you can call Jacksum and HashGarten from
-  your file manager
+  within it
 
 #### Supported File Managers
 
-**Finder**, which supports the Apple Script Menu, is fully supported by this integration program. In
-addition, some file managers that provide proprietary interfaces are supported as well.
+**Finder**, which supports Apple's Script menu, is fully supported by this installation program. In
+addition, some file managers that provide proprietary interfaces are supported.
 
 The installation program sets up the integration for **Finder**, **Path Finder**, **HoudahSpot**,
 **Tembo**, **muCommander** and **Marta**. It also installs four **Quick Actions**, which show up in the
-Services menu of many apps - but not of all of them, see the "Integration" column of the table below.
+Services menu of many apps — but not in all of them; see the "Integration" column of the table below.
 All other file managers in the table either work by drag & drop only, or require a few manual steps
 that are documented in the wiki.
 
 > [!TIP]
-> If your preferred file manager supports neither the Apple Script Menu nor external scripts nor
+> If your preferred file manager supports neither Apple's Script menu nor external scripts nor
 > plug-ins, chances are high that it supports at least **drag & drop**. In that case you can drag
 > file and directory paths from your file manager onto the HashGarten GUI and process them there, for
 > example to calculate hash values.
@@ -115,31 +115,31 @@ The following file managers have been tested successfully with Jacksum and HashG
 
 | File Manager                                                                   | Integration                                         | Comment                                                                                                                |
 |--------------------------------------------------------------------------------|-----------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
-| [Commander One](https://mac.eltima.com/file-manager.html)                      | Drag & drop + Services (partly)                     | Commercial Software, its Services menu hands over only the item currently selected, a multiple selection is ignored    |
+| [Commander One](https://mac.eltima.com/file-manager.html)                      | Drag & drop + Services (partly)                     | Commercial Software; its Services menu hands over only the item currently selected; a multiple selection is ignored    |
 | [CRAX Commander](https://crax.soft4u2.com)                                     | Drag & drop, no Services                            | Commercial Software (Demo)                                                                                             |
 | [Dropover](https://dropoverapp.com/)                                           | Drag & drop, no Services                            | Commercial Software                                                                                                    |
-| [EasyFind](https://www.devontechnologies.com/apps/freeware)                    | Drag & drop, no Services                            | Freeware, its Services menu offers the selection as a URL only, so the Quick Actions do not appear there               |
+| [EasyFind](https://www.devontechnologies.com/apps/freeware)                    | Drag & drop, no Services                            | Freeware; its Services menu offers the selection as a URL only, so the Quick Actions do not appear there               |
 | [Fileside](https://www.fileside.app)                                           | Drag & drop + proprietary API (manual), no Services | Commercial Software (Trial), [a few extra steps required](https://github.com/jonelo/jacksum-for-macos/wiki/Fileside)   |
-| [Finder](https://support.apple.com/guide/mac-help/mchlp2605/mac)               | Drag & drop + Script Menu (installer) + Services    | Bundled with macOS, the standard file manager from Apple                                                               |
+| [Finder](https://support.apple.com/guide/mac-help/mchlp2605/mac)               | Drag & drop + Script menu (installer) + Services    | Bundled with macOS, the standard file manager from Apple                                                               |
 | [ForkLift 4](https://binarynights.com/)                                        | Drag & drop + proprietary API (manual) + Services   | Commercial Software (Trial), [a few extra steps required](https://github.com/jonelo/jacksum-for-macos/wiki/ForkLift-4) |
 | [HiFile](https://www.hifile.app/)                                              | Drag & drop, no Services                            | Commercial Software (Trial)                                                                                            |
-| [HoudahSpot](https://www.houdah.com/houdahSpot/)                               | Drag & drop + Script Menu (installer) + Services    | Commercial Software (Trial), a search tool rather than a file browser                                                  |
+| [HoudahSpot](https://www.houdah.com/houdahSpot/)                               | Drag & drop + Script menu (installer) + Services    | Commercial Software (Trial), a search tool rather than a file browser                                                  |
 | [Marta](https://marta.sh)                                                      | Drag & drop + plug-in (installer) + Services        | Freeware                                                                                                               |
 | [muCommander](https://www.mucommander.com)                                     | Drag & drop + plug-in (installer), no Services      | Free/Libre Open Source Software (GPLv3)                                                                                |
 | [Nimble Commander](https://magnumbytes.com)                                    | Drag & drop + Services                              | Free/Libre Open Source Software (GPLv3)                                                                                |
-| [Path Finder](https://www.cocoatech.io)                                        | Drag & drop + Script Menu (installer) + Services    | Commercial Software                                                                                                    |
-| [Tembo](https://www.houdah.com/tembo/)                                         | Drag & drop + Script Menu (installer) + Services    | Commercial Software (Trial), a search tool rather than a file browser                                                  |
+| [Path Finder](https://www.cocoatech.io)                                        | Drag & drop + Script menu (installer) + Services    | Commercial Software                                                                                                    |
+| [Tembo](https://www.houdah.com/tembo/)                                         | Drag & drop + Script menu (installer) + Services    | Commercial Software (Trial), a search tool rather than a file browser                                                  |
 | [Transmit](https://panic.com/transmit)                                         | Drag & drop + Services                              | Commercial Software (Trial)                                                                                            |
 | [VioletGiraffe FileCommander](https://github.com/VioletGiraffe/file-commander) | Drag & drop                                         | Free/Libre Open Source Software (Apache 2.0)                                                                           |
 
 "(installer)" means that the installation program creates the integration for you. "(manual)" means
 that the file manager offers a suitable interface, but that you have to set it up yourself as
 described on the linked wiki page. "Services" means that the four Quick Actions have been verified in
-that file manager's Services menu and that they work without restrictions, that is with a multiple
+that file manager's Services menu and that they work without restrictions, that is, with a multiple
 selection of both files and directories. "Services (partly)" means that they do appear, but with the
 restriction that is described in the Comment column. "no Services" means that the Quick Actions do
 not appear in that file manager's Services menu at all. They are installed either way, so a file
-manager without any of those three notes may still offer them - it just has not been verified yet.
+manager without any of those three notes may still offer them — it just has not been verified yet.
 
 ## How to use it
 
@@ -149,25 +149,25 @@ Open Spotlight Search and search for HashGarten, or go to Applications and open 
 
 <img width="558" alt="Spotlight Search" src="https://github.com/jonelo/jacksum-for-macos/assets/10409423/f57c53d2-8fad-41a3-8f65-229c838db8e3">
 
-### Using Finder and the Script Menu
+### Using Finder and the Script menu
 
 Go to Finder, select files and folders, and choose an action from the Jacksum script folder.
 
-<img width="414" alt="Jacksum at the Finder script menu" src="https://github.com/jonelo/jacksum-for-macos/assets/10409423/d8d94614-c927-4f5e-97b6-18d4f3bb3e3b">
+<img width="414" alt="Jacksum at the Finder Script menu" src="https://github.com/jonelo/jacksum-for-macos/assets/10409423/d8d94614-c927-4f5e-97b6-18d4f3bb3e3b">
 
 From here, [HashGarten](https://github.com/jonelo/HashGarten) takes over and you can calculate
 checksums, CRCs and hash values of the selected files.
 
-### Using Path Finder and the Script Menu
+### Using Path Finder and the Script menu
 
 Open Path Finder, select files and folders, and choose an action from the Jacksum script folder.
 
-<img width="449" alt="Jacksum at the Path Finder script menu" src="https://github.com/jonelo/jacksum-for-macos/assets/10409423/a1c9467c-30ed-450b-846b-cfa2c03a9291">
+<img width="449" alt="Jacksum at the Path Finder Script menu" src="https://github.com/jonelo/jacksum-for-macos/assets/10409423/a1c9467c-30ed-450b-846b-cfa2c03a9291">
 
 From here, [HashGarten](https://github.com/jonelo/HashGarten) takes over and you can calculate
 checksums, CRCs and hash values of the selected files.
 
-### Using HoudahSpot and the Script Menu
+### Using HoudahSpot and the Script menu
 
 Open HoudahSpot, run a search, select results, and choose an action from the Jacksum script folder.
 
@@ -178,21 +178,21 @@ checksums, CRCs and hash values of the selected files.
 
 > [!NOTE]
 > HoudahSpot is a search tool, so its results usually live in many different folders. The integration
-> prints the paths relative to the first selected entry, which in that case can produce paths such as
+> prints the paths relative to the first selected entry, which can produce paths such as
 > `../../Documents/report.pdf`.
 
-### Using Tembo and the Script Menu
+### Using Tembo and the Script menu
 
 Open Tembo, run a search, select results, and choose an action from the Jacksum script folder.
 
-<!-- TODO: screenshot of the Jacksum script menu in Tembo -->
+<!-- TODO: screenshot of the Jacksum Script menu in Tembo -->
 
 From here, [HashGarten](https://github.com/jonelo/HashGarten) takes over and you can calculate
 checksums, CRCs and hash values of the selected files.
 
 > [!NOTE]
 > Tembo is a search tool, so its results usually live in many different folders. The integration
-> prints the paths relative to the first selected entry, which in that case can produce paths such as
+> prints the paths relative to the first selected entry, which can produce paths such as
 > `../../Documents/report.pdf`.
 
 ### Using the Services menu (Quick Actions)
@@ -213,11 +213,11 @@ checksums, CRCs and hash values of the selected files.
 
 > [!NOTE]
 > Apps that were already running while you installed keep their cached Services menu. Restart such an
-> app if its menu entries show up without the Jacksum icon, or without showing up at all.
+> app if its menu entries show up without the Jacksum icon, or do not show up at all.
 
 > [!NOTE]
 > The Quick Actions run under Automator rather than under HashGarten. The first time you call one for
-> a file on your Desktop, in Documents or in Downloads, macOS can ask you to grant Automator access to
+> a file on your Desktop, in Documents or in Downloads, macOS may ask you to grant Automator access to
 > that folder.
 
 ### Using muCommander
@@ -257,7 +257,7 @@ For more information, see [Jacksum](https://github.com/jonelo/jacksum).
 
 ### Finder
 
-Open Finder, click the script menu, and select "Open Scripts Folder", followed by "Open Finder
+Open Finder, click the Script menu, and select "Open Scripts Folder", followed by "Open Finder
 Scripts Folder". Alternatively, press ⇧⌘G, enter the path to the Finder scripts folder
 `~/Library/Scripts/Applications/Finder`, and click the "Go" button.
 
@@ -265,7 +265,7 @@ Open `Jacksum 4.0.0` and remove any .scpt file that you do not want to see.
 
 ### Path Finder
 
-Open Path Finder, click the script menu, and select "Open Scripts Folder", followed by "Open Path
+Open Path Finder, click the Script menu, and select "Open Scripts Folder", followed by "Open Path
 Finder Scripts Folder". Open `Jacksum 4.0.0` and remove any .scpt file that you do not want to see.
 
 ### HoudahSpot
@@ -282,7 +282,7 @@ any .scpt file that you do not want to see.
 
 ### Quick Actions
 
-There are two ways to get rid of single entries or of the whole Services integration.
+There are two ways to get rid of individual entries or of the whole Services integration.
 
 **Switch them off, without removing anything.** Open System Settings → Keyboard → "Keyboard
 Shortcuts…" → Services, and untick the four entries that start with "Jacksum - ". macOS keeps that
@@ -316,7 +316,7 @@ Modify that file to match your needs.
 >% cp commands.xml commands.xml.mine && mv commands.xml.mine commands.xml
 >```
 
-### How to recreate all items again
+### How to recreate all items
 
 Just run the `Jacksum for macOS.app` again. Note that this also recreates the muCommander commands
 file, which discards any changes you made to it.
@@ -403,7 +403,7 @@ them and update the Services cache:
 % /System/Library/CoreServices/pbs -flush
 ```
 
-That is all there is to it: each bundle is self contained, so nothing is left behind anywhere else.
+That is all there is to it: each bundle is self-contained, so nothing is left behind anywhere else.
 
 > [!NOTE]
 > An app that is running while you remove the bundles keeps its Services menu until you restart it,

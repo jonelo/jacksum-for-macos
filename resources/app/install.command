@@ -732,13 +732,13 @@ EOL
 
 cat << EOL
 
-Four Quick Actions have been installed as well. You
-find them in the Services menu of every app that
-offers a file selection there, such as the Finder
-and HoudahSpot.
+Four Quick Actions have been installed as well.
+You find them in the Services menu of every app
+that offers a file selection there, such as the
+Finder.
 
-Please refer to the readme.pdf to see
-how you can use it with your file manager.
+Please refer to the readme.pdf to see how you
+can use it with your file manager.
 EOL
 
   if [ $APPLE_SCRIPT_ERROR -eq 0 ]; then

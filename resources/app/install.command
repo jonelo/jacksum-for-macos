@@ -19,7 +19,7 @@
 #
 
 PATH="/sbin:/usr/sbin:/bin:/usr/bin"
-JACKSUM_VERSION=4.0.0
+JACKSUM_VERSION=4.0.2
 
 
 #---------------------------------------------------------------
@@ -634,7 +634,7 @@ function createJacksumLauncher {
   echo "Creating $LAUNCHER ..."
   cat << "EOL" > "$LAUNCHER"
 #!/bin/bash
-/Applications/HashGarten.app/Contents/Java/jre_latest/Contents/Home/bin/java -jar "/Applications/HashGarten.app/Contents/MacOS/lib/jacksum-4.0.0.jar" "$@"
+/Applications/HashGarten.app/Contents/Java/jre_latest/Contents/Home/bin/java -jar "/Applications/HashGarten.app/Contents/MacOS/lib/jacksum-4.0.2.jar" "$@"
 EOL
 
   chmod +x "$LAUNCHER"

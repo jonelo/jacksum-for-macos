@@ -2,7 +2,7 @@
 
 # Jacksum for macOS
 
-<img width="696" height="440" alt="image" src="https://github.com/user-attachments/assets/3b9652b1-c98e-4fc9-abcd-7ffba716d915" />
+<img width="695" height="440" alt="image" src="https://github.com/user-attachments/assets/523afaa3-af78-464a-8160-379cce6a5c71" />
 
 ## Abstract
 
@@ -66,11 +66,11 @@ app, but it also offers you the option to bypass its default policy and open the
 > [!TIP]
 > You can open a Terminal in order to bypass both the graphical installation program and the security
 > warnings, and directly run the script that is bundled with the installer app. Example for
-> Jacksum 4.0.0:
+> Jacksum 4.0.2:
 >
 >```
 >% cd /Volumes/Jacksum\ for\ macOS
->% ./Jacksum\ 4.0.0\ for\ macOS.app/Contents/Resources/script
+>% ./Jacksum\ 4.0.2\ for\ macOS.app/Contents/Resources/script
 >```
 
 ### 3. Check the results
@@ -78,7 +78,7 @@ app, but it also offers you the option to bypass its default policy and open the
 At the end of the task, a summary tells you which file managers have been found and where Jacksum and
 HashGarten have been integrated.
 
-<img width="550" alt="After the installation" src="https://github.com/jonelo/jacksum-for-macos/assets/10409423/21a49953-3fa3-41a6-bfb4-21bd1e8ef0ef">
+<img width="550" height="451" alt="image" src="https://github.com/user-attachments/assets/bb49d238-11df-48fe-bff0-3f016646e97d" />
 
 
 ## System Requirements
@@ -203,7 +203,8 @@ Unlike the integrations above, the four Quick Actions are not tied to a single a
 folders, right-click, and choose an action from the Services submenu. In the Finder they also appear
 in the "Quick Actions" submenu of the context menu.
 
-<!-- TODO: screenshot of the Jacksum Quick Actions in the Services menu -->
+<!-- screenshot of the Jacksum Quick Actions in the Services menu -->
+<img width="618" height="240" alt="image" src="https://github.com/user-attachments/assets/81458408-6b41-443b-b1f2-42c0d2fd4c8a" />
 
 From here, [HashGarten](https://github.com/jonelo/HashGarten) takes over and you can calculate
 checksums, CRCs and hash values of the selected files.
@@ -263,23 +264,23 @@ Open Finder, click the Script menu, and select "Open Scripts Folder", followed b
 Scripts Folder". Alternatively, press ⇧⌘G, enter the path to the Finder scripts folder
 `~/Library/Scripts/Applications/Finder`, and click the "Go" button.
 
-Open `Jacksum 4.0.0` and remove any .scpt file that you do not want to see.
+Open `Jacksum 4.0.2` and remove any .scpt file that you do not want to see.
 
 ### Path Finder
 
 Open Path Finder, click the Script menu, and select "Open Scripts Folder", followed by "Open Path
-Finder Scripts Folder". Open `Jacksum 4.0.0` and remove any .scpt file that you do not want to see.
+Finder Scripts Folder". Open `Jacksum 4.0.2` and remove any .scpt file that you do not want to see.
 
 ### HoudahSpot
 
 Press ⇧⌘G in Finder, enter the path to the HoudahSpot scripts folder
-`~/Library/Scripts/Applications/HoudahSpot`, and click the "Go" button. Open `Jacksum 4.0.0` and
+`~/Library/Scripts/Applications/HoudahSpot`, and click the "Go" button. Open `Jacksum 4.0.2` and
 remove any .scpt file that you do not want to see.
 
 ### Tembo
 
 Press ⇧⌘G in Finder, enter the path to the Tembo scripts folder
-`~/Library/Scripts/Applications/Tembo`, and click the "Go" button. Open `Jacksum 4.0.0` and remove
+`~/Library/Scripts/Applications/Tembo`, and click the "Go" button. Open `Jacksum 4.0.2` and remove
 any .scpt file that you do not want to see.
 
 ### Quick Actions
